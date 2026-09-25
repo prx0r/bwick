@@ -1,0 +1,318 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Roast.pet — Make Your Pet Say Something Funny</title>
+<style>
+:root{--bg:#0f0f0f;--card:#1a1a1e;--border:#2a2a2e;--text:#e0e0e0;--dim:#666;--accent:#ff6b6b;--accent2:#ff8844;--green:#4ec9b0}
+*{box-sizing:border-box;margin:0;padding:0}
+body{font-family:system-ui,-apple-system,sans-serif;background:var(--bg);color:var(--text);min-height:100vh}
+.header{background:var(--card);border-bottom:1px solid var(--border);padding:16px 24px;display:flex;align-items:center;gap:12px}
+.header h1{font-size:20px;font-weight:700}
+.header .brand{color:var(--accent);font-weight:800;font-size:22px}
+.container{max-width:1200px;margin:0 auto;padding:24px;display:grid;grid-template-columns:400px 1fr;gap:24px}
+@media(max-width:900px){.container{grid-template-columns:1fr}}
+.panel{background:var(--card);border:1px solid var(--border);border-radius:12px;padding:20px}
+.panel h2{font-size:14px;text-transform:uppercase;color:var(--dim);letter-spacing:1px;margin-bottom:16px}
+label{display:block;font-size:13px;color:var(--dim);margin-bottom:4px;margin-top:12px}
+label:first-child{margin-top:0}
+input,select,textarea{width:100%;background:var(--bg);border:1px solid var(--border);color:var(--text);padding:10px 12px;border-radius:8px;font-size:14px;font-family:inherit}
+textarea{resize:vertical;min-height:60px}
+input:focus,select:focus,textarea:focus{outline:none;border-color:var(--accent)}
+.photo-upload{border:2px dashed var(--border);border-radius:12px;padding:32px;text-align:center;cursor:pointer;transition:border-color .2s}
+.photo-upload:hover{border-color:var(--accent)}
+.photo-upload input{display:none}
+.photo-upload .icon{font-size:48px;margin-bottom:8px}
+.photo-upload p{color:var(--dim);font-size:13px}
+.photo-preview{width:100%;max-height:200px;object-fit:cover;border-radius:8px;margin-top:8px}
+.templates{display:grid;grid-template-columns:repeat(auto-fill,minmax(140px,1fr));gap:8px;margin-top:8px}
+.template-card{background:var(--bg);border:2px solid var(--border);border-radius:8px;padding:12px;cursor:pointer;text-align:center;transition:all .2s}
+.template-card:hover{border-color:var(--accent)}
+.template-card.selected{border-color:var(--accent);background:rgba(255,107,107,.1)}
+.template-card .name{font-size:12px;font-weight:600;margin-top:4px}
+.template-card .family{font-size:10px;color:var(--dim)}
+.btn{background:var(--accent);color:#fff;border:none;padding:12px 24px;border-radius:8px;font-size:14px;font-weight:600;cursor:pointer;width:100%;margin-top:16px;transition:opacity .2s}
+.btn:hover{opacity:.9}
+.btn:disabled{opacity:.4;cursor:not-allowed}
+.btn.secondary{background:var(--border);color:var(--text)}
+.preview-area{display:flex;flex-direction:column;align-items:center;justify-content:center;min-height:400px}
+.preview-area img{max-width:100%;max-height:600px;border-radius:8px;box-shadow:0 8px 32px rgba(0,0,0,.5)}
+.preview-placeholder{text-align:center;color:var(--dim)}
+.preview-placeholder .icon{font-size:64px;margin-bottom:12px}
+.quote{background:var(--bg);border:1px solid var(--border);border-radius:8px;padding:16px;margin-top:16px}
+.quote .line{display:flex;justify-content:space-between;padding:4px 0;font-size:14px}
+.quote .total{border-top:1px solid var(--border);margin-top:8px;padding-top:8px;font-weight:700}
+.joke-options{display:flex;flex-direction:column;gap:8px;margin-top:8px}
+.joke-option{background:var(--bg);border:2px solid var(--border);border-radius:8px;padding:12px;cursor:pointer;transition:all .2s}
+.joke-option:hover{border-color:var(--accent2)}
+.joke-option.selected{border-color:var(--accent);background:rgba(255,107,107,.1)}
+.joke-option .setup{font-weight:600;font-size:14px}
+.joke-option .punchline{color:var(--dim);font-size:13px;margin-top:4px}
+.joke-option .tone{font-size:11px;color:var(--accent2);margin-top:4px}
+.loading{display:inline-block;width:16px;height:16px;border:2px solid var(--border);border-top-color:var(--accent);border-radius:50%;animation:spin .6s linear infinite}
+@keyframes spin{to{transform:rotate(360deg)}}
+.step{display:none}.step.active{display:block}
+.tabs{display:flex;gap:4px;margin-bottom:16px}
+.tab{padding:8px 16px;border-radius:8px;font-size:13px;cursor:pointer;color:var(--dim);background:var(--bg);border:1px solid var(--border)}
+.tab.active{color:var(--text);border-color:var(--accent);background:rgba(255,107,107,.1)}
+</style>
+</head>
+<body>
+<div class="header">
+  <span class="brand">ROAST.PET</span>
+  <span>Card Studio</span>
+</div>
+<div class="container">
+  <!-- Template gallery: real rendered card images -->
+  <div class="panel" style="margin-bottom:20px">
+    <h2>Card Templates — pick one or generate below</h2>
+    <div style="margin-top:8px;display:flex;gap:8px;align-items:center">
+      <label style="font-size:13px">Avatar:</label>
+      <select id="avatar-select" onchange="galleryAvatar=this.value;galleryPhoto=null;renderGallery()"
+        style="flex:1;padding:6px;border-radius:6px"><option value="">Stock cards</option></select>
+      <button class="btn secondary" style="padding:6px 12px" onclick="saveAvatar()">Save upload as avatar</button>
+    </div>
+    <div id="gallery" style="display:grid;grid-template-columns:repeat(auto-fill,minmax(160px,1fr));gap:12px;margin-top:12px"></div>
+  </div>
+  <!-- Left: Form -->
+  <div>
+    <div class="panel">
+      <h2>1. Upload Your Pet</h2>
+      <div class="photo-upload" onclick="document.getElementById('photo-input').click()">
+        <input type="file" id="photo-input" accept="image/*" onchange="handlePhoto(this)">
+        <div class="icon">🐾</div>
+        <p>Click to upload a photo of your pet</p>
+      </div>
+      <img id="photo-preview" class="photo-preview" style="display:none">
+
+      <h2 style="margin-top:20px">2. Card Details</h2>
+      <label>Recipient Name</label>
+      <input id="recipient" placeholder="e.g. James, Mum, Dan">
+      <label>Occasion</label>
+      <select id="occasion">
+        <option value="just_because">Just Because</option>
+        <option value="birthday">Birthday</option>
+        <option value="christmas">Christmas</option>
+        <option value="leaving">Leaving / Farewell</option>
+        <option value="anniversary">Anniversary</option>
+        <option value="valentines">Valentine's Day</option>
+      </select>
+      <label>Roast Level</label>
+      <select id="roast">
+        <option value="roast">Roast</option>
+        <option value="mild">Mild (Family Safe)</option>
+        <option value="savage">Savage</option>
+      </select>
+      <label>Tell us about them (1-3 things)</label>
+      <textarea id="facts" placeholder="e.g. Worried about AI taking his job, supports Arsenal, always late"></textarea>
+      <label>Pet Name</label>
+      <input id="pet-name" placeholder="e.g. Max, Professor, Biscuit">
+      <label>Pet Species</label>
+      <input id="pet-species" placeholder="e.g. dog, cat, rabbit">
+
+      <button class="btn" id="generate-btn" onclick="generateCard()">Generate Card</button>
+    </div>
+  </div>
+
+  <!-- Right: Preview -->
+  <div>
+    <div class="panel">
+      <h2>Preview</h2>
+      <div id="step-joke" class="step active">
+        <div class="preview-placeholder">
+          <div class="icon">🎄</div>
+          <p>Fill in the details and click Generate</p>
+        </div>
+      </div>
+      <div id="step-choose" class="step">
+        <p style="margin-bottom:12px;color:var(--dim)">Pick your favourite joke:</p>
+        <div id="joke-options" class="joke-options"></div>
+        <button class="btn secondary" onclick="renderChosen()" id="render-btn">Render This Card</button>
+      </div>
+      <div id="step-preview" class="step">
+        <img id="card-preview" src="">
+        <div class="quote" id="quote-box" style="display:none">
+          <div class="line"><span>Card</span><span>£3.50</span></div>
+          <div class="line"><span>Shipping</span><span>£2.99</span></div>
+          <div class="line total"><span>Total</span><span>£6.49</span></div>
+        </div>
+        <button class="btn" onclick="orderCard()" id="order-btn">Order This Card</button>
+        <button class="btn secondary" onclick="backToGenerate()" style="margin-top:8px">Generate Another</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+<script>
+const T = new URLSearchParams(location.search).get("token") || "";
+const api = (m, p, b) => fetch(p + "?token=" + encodeURIComponent(T), {
+  method: m, headers: {"Content-Type": "application/json"}, body: b ? JSON.stringify(b) : undefined
+}).then(r => r.json());
+
+let photoUrl = null;
+let candidates = [];
+let chosen = null;
+
+// Template gallery: static cards, uploaded photo, or saved avatar in situations.
+let galleryTemplates = [];
+let galleryPhoto = null;
+let galleryAvatar = null;
+function cardSrc(id) {
+  if (galleryAvatar)
+    return `/photo-card/${id}.png?avatar=${encodeURIComponent(galleryAvatar)}&token=${encodeURIComponent(T)}`;
+  if (galleryPhoto)
+    return `/photo-card/${id}.png?photo=${encodeURIComponent(galleryPhoto)}&token=${encodeURIComponent(T)}`;
+  return `/cards/${id}.png?token=${encodeURIComponent(T)}`;
+}
+function renderGallery() {
+  const list = galleryTemplates;
+  document.getElementById("gallery").innerHTML = list.map(t => {
+    const id = t.id || t;
+    const name = t.name || id;
+    return `<div style="cursor:pointer;text-align:center" title="${name.replace(/"/g, "")}">
+      <img src="${cardSrc(id)}" alt="${name.replace(/"/g, "")}"
+        style="width:100%;border-radius:8px;border:1px solid var(--border)" loading="lazy"
+        onerror="this.style.display='none'">
+      <div style="font-size:12px;margin-top:4px;color:var(--dim)">${name}</div>
+    </div>`;
+  }).join("");
+}
+function refreshAvatars(selected) {
+  fetch("/api/avatars?token=" + encodeURIComponent(T)).then(r => r.json()).then(d => {
+    const avs = d.avatars || [];
+    const sel = document.getElementById("avatar-select");
+    if (!sel) return;
+    sel.innerHTML = `<option value="">Stock cards</option>` + avs.map(a =>
+      `<option value="${a.id}"${a.id === selected ? " selected" : ""}>${a.name} (${a.species || "pet"})</option>`).join("");
+  }).catch(() => {});
+}
+fetch("/api/templates?token=" + encodeURIComponent(T)).then(r => r.json()).then(d => {
+  galleryTemplates = d.templates || d || [];
+  renderGallery();
+}).catch(() => {});
+refreshAvatars(null);
+
+function handlePhoto(input) {
+  const file = input.files[0];
+  if (!file) return;
+  const reader = new FileReader();
+  reader.onload = e => {
+    document.getElementById("photo-preview").src = e.target.result;
+    document.getElementById("photo-preview").style.display = "block";
+  };
+  reader.readAsDataURL(file);
+
+  // Upload to server
+  const fd = new FormData();
+  fd.append("photo", file);
+  fetch("/api/upload?token=" + encodeURIComponent(T), {method: "POST", body: fd})
+    .then(r => r.json()).then(d => {
+      photoUrl = d.url;
+      // Refresh gallery: show this face in every card.
+      if (d.url) {
+        galleryPhoto = d.url.split("/").pop();
+        galleryAvatar = null;
+        const sel = document.getElementById("avatar-select");
+        if (sel) sel.value = "";
+        renderGallery();
+      }
+    });
+
+function saveAvatar() {
+  if (!galleryPhoto) { alert("Upload a pet photo first."); return; }
+  const name = (document.getElementById("pet-name") || {}).value || "Pet";
+  const species = (document.getElementById("pet-species") || {}).value || "";
+  fetch("/api/avatar?token=" + encodeURIComponent(T), {
+    method: "POST", headers: {"Content-Type": "application/json"},
+    body: JSON.stringify({photo: galleryPhoto, name, species}),
+  }).then(r => r.json()).then(d => {
+    if (d.avatar) {
+      galleryAvatar = d.avatar.id;
+      galleryPhoto = null;
+      refreshAvatars(d.avatar.id);
+      renderGallery();
+    } else {
+      alert("Avatar save failed: " + (d.error || "unknown"));
+    }
+  }).catch(() => alert("Avatar save failed."));
+}
+}
+
+async function generateCard() {
+  const btn = document.getElementById("generate-btn");
+  btn.disabled = true; btn.innerHTML = '<span class="loading"></span> Generating...';
+
+  const facts = document.getElementById("facts").value.split(",").map(s => s.trim()).filter(Boolean);
+  try {
+    const r = await api("POST", "/api/create-card", {
+      recipient_name: document.getElementById("recipient").value || "Someone",
+      occasion: document.getElementById("occasion").value,
+      facts: facts,
+      roast_level: document.getElementById("roast").value,
+      pet_name: document.getElementById("pet-name").value || undefined,
+      pet_species: document.getElementById("pet-species").value || undefined,
+      pet_image_url: photoUrl || undefined,
+    });
+    candidates = [r.top_candidate, ...(r.other_candidates || [])];
+    chosen = candidates[0];
+    showJokeOptions();
+  } catch(e) { alert("Error: " + e.message); }
+  btn.disabled = false; btn.textContent = "Generate Card";
+}
+
+function showJokeOptions() {
+  document.getElementById("step-joke").classList.remove("active");
+  document.getElementById("step-choose").classList.add("active");
+  const el = document.getElementById("joke-options");
+  el.innerHTML = candidates.map((c, i) => `
+    <div class="joke-option ${i===0?'selected':''}" onclick="selectJoke(${i})">
+      <div class="setup">${esc(c.setup)}</div>
+      ${c.punchline ? '<div class="punchline">' + esc(c.punchline) + '</div>' : ''}
+      <div class="tone">${c.tone.join(", ")}</div>
+    </div>`).join("");
+}
+
+function selectJoke(i) {
+  chosen = candidates[i];
+  document.querySelectorAll(".joke-option").forEach((el, j) => el.classList.toggle("selected", j===i));
+}
+
+async function renderChosen() {
+  const btn = document.getElementById("render-btn");
+  btn.disabled = true; btn.innerHTML = '<span class="loading"></span> Rendering...';
+  try {
+    const r = await api("POST", "/api/preview", {
+      template_id: chosen.template_id, setup: chosen.setup, punchline: chosen.punchline,
+      visual: chosen.visual, pet_image_url: photoUrl || undefined,
+      recipient_name: document.getElementById("recipient").value || "Someone",
+      roast_level: document.getElementById("roast").value,
+    });
+    document.getElementById("card-preview").src = r.file.replace("/tmp/", "/previews/");
+    document.getElementById("step-choose").classList.remove("active");
+    document.getElementById("step-preview").classList.add("active");
+    document.getElementById("quote-box").style.display = "block";
+  } catch(e) { alert("Error: " + e.message); }
+  btn.disabled = false; btn.textContent = "Render This Card";
+}
+
+async function orderCard() {
+  const btn = document.getElementById("order-btn");
+  btn.disabled = true; btn.innerHTML = '<span class="loading"></span> Ordering...';
+  try {
+    const r = await api("POST", "/api/order", {render_path: "/tmp/card.html", shipping_address: {}});
+    alert("Order placed! ID: " + r.order_id);
+  } catch(e) { alert("Error: " + e.message); }
+  btn.disabled = false; btn.textContent = "Order This Card";
+}
+
+function backToGenerate() {
+  document.getElementById("step-preview").classList.remove("active");
+  document.getElementById("step-joke").classList.add("active");
+  document.getElementById("quote-box").style.display = "none";
+}
+
+function esc(s) { return (s||"").replace(/</g,"&lt;").replace(/\n/g,"<br>"); }
+</script>
+</body>
+</html>

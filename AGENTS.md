@@ -1,27 +1,33 @@
-# AGENTS.md — petsy operations
+# AGENTS.md — bwick operations
 
-> Personalized pet universe. Strategy + specs live here; engine code lives in
-> funnylabs; garden/ops in powops. Read VISION.md first, STACK.md second.
+> Personalized pet universe. ONE canonical repo: strategy + specs + engine
+> all live here. Read VISION.md first, STACK.md second.
 
 ## What this repo is (and isn't)
 
-- **Is**: product strategy, supplier docs, build specs, listing packs, economics.
-  Decisions are made here and referenced by code elsewhere.
-- **Isn't**: a monorepo. No engine code, no garden collectors, no secrets.
-  Executable pipeline code belongs with its engine (funnylabs `collect_daily.py`
-  pattern: small runnable modules + `--demo` proof).
+- **Is**: `engine/` (the runnable pipeline), product strategy, supplier docs,
+  build specs, listing packs, economics. Decisions are made here.
+- **Is not**: a monorepo of unrelated projects. The former `funnylabs` repo is
+  the source of `engine/` and is superseded — do not push engine changes there.
+
+## Layout
+
+- `engine/` — runnable pipeline (gallery, avatars, render_cards, talk.py,
+  etsy_order.py, brick.py, MCP, studio server, Worker). Run from `engine/`.
+- `docs/` + root `.md` — specs, pricing, listings. No engine code in `docs/`.
+- `ideas.md` — inbox; graduates to `docs/products.md` or dies with a reason.
 
 ## How to work here
 
-1. **Docs before code.** Spec the SKU/pipeline/doc first (this repo); build only
-   after the spec's acceptance criteria exist. A doc without acceptance criteria
-   is a note, not a spec — send it to `ideas.md`.
-2. **Ideas graduate or die.** `ideas.md` is the inbox. Promotion = entry in
-   `docs/products.md` with price + fulfilment + demand evidence. Death = one-line
-   reason appended in place. Never delete ideas silently.
-3. **Prices are evidence-graded.** Suffix every figure: ✓ verified (live quote /
-   published page), Q (needs quote endpoint / dashboard lookup), EST (modelled —
-   confirm before listing). Unmarked numbers get challenged on sight.
+1. **Docs before code.** Spec the SKU/pipeline first; build only after the
+   spec's acceptance criteria exist. A doc without acceptance criteria is a
+   note — send it to `ideas.md`.
+2. **Ideas graduate or die.** Promotion = entry in `docs/products.md` with
+   price + fulfilment + demand evidence. Death = one-line reason in place.
+   Never delete ideas silently.
+3. **Prices are evidence-graded.** Suffix every figure: ✓ verified (live quote
+   / published page), Q (needs quote endpoint / dashboard lookup), EST
+   (modelled — confirm before listing). Unmarked numbers get challenged.
 4. **IP check is a gate, not a guideline.** New theme/sku/copy → scan titles,
    tags, descriptions against `docs/trademark.md` BEFORE writing the listing
    pack. Fandom energy, zero trademarks. Memorial stays dropped.

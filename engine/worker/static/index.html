@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Roast.pet</title>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700;900&family=Inter:wght@400;600;700;800&family=Caveat:wght@700&display=swap" rel="stylesheet">
+<script src="https://cdnjs.cloudflare.com/ajax/libs/html2canvas/1.4.1/html2canvas.min.js"></script>
+<style>
+:root{--bg:#0a0a0a;--surface:#141414;--border:#222;--text:#f0f0f0;--dim:#888;--accent:#ff6b6b;--green:#4ec9b0}
+*{box-sizing:border-box;margin:0;padding:0}
+body{font-family:'Inter',system-ui,sans-serif;background:var(--bg);color:var(--text)}
+.hero{text-align:center;padding:48px 24px 24px}
+.hero h1{font-size:clamp(28px,5vw,48px);font-weight:900;letter-spacing:-1px}
+.hero h1 span{color:var(--accent)}
+.hero p{color:var(--dim);margin-top:8px;font-size:15px}
+.upload{max-width:480px;margin:24px auto;padding:32px;border:2px dashed var(--border);border-radius:16px;text-align:center;cursor:pointer;transition:.2s}
+.upload:hover{border-color:var(--accent)}
+.upload.done{border-color:var(--green);border-style:solid}
+.upload input{display:none}
+.upload .emoji{font-size:42px}
+.upload p{color:var(--dim);font-size:13px;margin-top:6px}
+.upload img{max-height:100px;border-radius:8px}
+.grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(280px,1fr));gap:20px;padding:20px;max-width:1400px;margin:0 auto}
+.grid-head{text-align:center;padding:0 20px 16px}
+.grid-head h2{font-size:22px;font-weight:800}
+.grid-head p{color:var(--dim);font-size:13px;margin-top:4px}
+.template-card{background:var(--surface);border:1px solid var(--border);border-radius:12px;overflow:hidden;cursor:pointer;transition:.2s}
+.template-card:hover{transform:translateY(-4px);box-shadow:0 12px 32px rgba(0,0,0,.4);border-color:var(--accent)}
+.template-card .card-preview{aspect-ratio:5/7;position:relative;overflow:hidden}
+.template-card .card-face{width:100%;height:100%;display:flex;flex-direction:column;align-items:center;justify-content:center;padding:24px;text-align:center;position:relative}
+.template-card .card-face .joke-setup{font-family:'Playfair Display',serif;font-size:18px;font-weight:900;line-height:1.3;margin-bottom:16px}
+.template-card .card-face .pet-circle{width:100px;height:100px;border-radius:50%;border:3px dashed rgba(255,255,255,.2);display:flex;align-items:center;justify-content:center;font-size:32px;margin:8px auto}
+.template-card .card-face .joke-punch{font-size:13px;color:rgba(255,255,255,.7);line-height:1.4;margin-top:12px}
+.template-card .card-face .brand{position:absolute;bottom:12px;right:16px;font-size:9px;color:rgba(255,255,255,.3);letter-spacing:2px;text-transform:uppercase}
+.template-card .card-info{padding:12px 16px;display:flex;justify-content:space-between;align-items:center}
+.template-card .card-info .name{font-weight:700;font-size:13px}
+.template-card .card-info .price{color:var(--accent);font-weight:800;font-size:14px}
+.modal-bg{display:none;position:fixed;inset:0;background:rgba(0,0,0,.9);z-index:100;align-items:center;justify-content:center;padding:20px}
+.modal-bg.on{display:flex}
+.modal{background:var(--surface);border-radius:16px;max-width:900px;width:100%;max-height:90vh;overflow-y:auto;display:grid;grid-template-columns:1fr 1fr}
+@media(max-width:700px){.modal{grid-template-columns:1fr}}
+.modal .preview-side{background:#111;display:flex;align-items:center;justify-content:center;padding:24px}
+.modal .preview-side .card-full{width:100%;max-width:350px;aspect-ratio:5/7;border-radius:8px;overflow:hidden;position:relative}
+.modal .info-side{padding:28px;display:flex;flex-direction:column}
+.modal .info-side h2{font-size:20px;font-weight:800}
+.modal .info-side .tmpl{color:var(--accent);font-size:11px;text-transform:uppercase;letter-spacing:1px;margin-top:3px}
+.modal .info-side .joke-text{margin-top:16px;font-size:14px;line-height:1.7;color:rgba(255,255,255,.8)}
+.modal .info-side .joke-text b{color:#fff}
+.modal .info-side .joke-text .dim{color:var(--dim);margin-top:6px}
+.modal .info-side .quote{background:var(--bg);border:1px solid var(--border);border-radius:10px;padding:14px;margin-top:auto}
+.modal .info-side .quote .row{display:flex;justify-content:space-between;padding:2px 0;font-size:13px}
+.modal .info-side .quote .tot{border-top:1px solid var(--border);margin-top:6px;padding-top:6px;font-weight:800;font-size:15px}
+.btn{background:var(--accent);color:#fff;border:none;padding:12px 24px;border-radius:10px;font-size:14px;font-weight:700;cursor:pointer;width:100%;margin-top:14px}
+.btn:hover{opacity:.9}
+.btn.sec{background:var(--border);color:var(--text)}
+.close-btn{position:absolute;top:12px;right:12px;background:rgba(0,0,0,.5);border:none;color:#fff;width:32px;height:32px;border-radius:50%;cursor:pointer;font-size:16px;z-index:10}
+</style></head><body>
+<div class="hero"><h1>Upload your pet.<br><span>We make them funny.</span></h1><p>See your pet on every card. Pick one. We print and ship it.</p></div>
+<div class="upload" id="up" onclick="document.getElementById('fi').click()"><input type="file" id="fi" accept="image/*" onchange="upl(this)"><div class="emoji">&#x1F43E;</div><p>Upload a photo of your pet</p></div>
+<div class="grid-head"><h2>Choose a card</h2><p>Your pet, every template. Click to preview and buy.</p></div>
+<div class="grid" id="grid"></div>
+<div class="modal-bg" id="mbg" onclick="if(event.target===this)cm()"><div class="modal" id="mmodal"></div></div>
+<script>
+var PU=null,TS=[];
+var C={thought_bubble:{bg:"linear-gradient(135deg,#0d2818,#1a4a2e)",color:"#4ec9b0"},pet_standup:{bg:"linear-gradient(135deg,#2d0a0a,#5a1a1a)",color:"#ff6b6b"},breaking_news:{bg:"linear-gradient(135deg,#0a0a2d,#1a1a4a)",color:"#569cd6"},performance_review:{bg:"linear-gradient(135deg,#2d2d0a,#4a4a1a)",color:"#dcdcaa"},pet_therapist:{bg:"linear-gradient(135deg,#0a2d2d,#1a4a4a)",color:"#4ec9b0"},search_history:{bg:"linear-gradient(135deg,#2d0a2d,#4a1a4a)",color:"#c586c0"},complaint_dept:{bg:"linear-gradient(135deg,#2d0a0a,#5a1a1a)",color:"#f44747"},split_panel:{bg:"linear-gradient(135deg,#0a0a2d,#1a1a4a)",color:"#569cd6"},incident_report:{bg:"linear-gradient(135deg,#2d1a0a,#4a2d1a)",color:"#ce9178"},wildcard:{bg:"linear-gradient(135deg,#2d1a0a,#5a2d1a)",color:"#ff8844"},xmas_santa_automated:{bg:"linear-gradient(135deg,#2d0505,#5a0a0a)",color:"#ff6b6b"},xmas_santa_vs_robots:{bg:"linear-gradient(135deg,#050a2d,#0a1a5a)",color:"#569cd6"},xmas_elf_redundancy:{bg:"linear-gradient(135deg,#2d2d05,#4a4a0a)",color:"#dcdcaa"},xmas_pet_security:{bg:"linear-gradient(135deg,#2d0505,#5a0a0a)",color:"#f44747"},xmas_performance_review:{bg:"linear-gradient(135deg,#2d1a05,#4a2d0a)",color:"#ce9178"},xmas_human_vs_pet:{bg:"linear-gradient(135deg,#050a2d,#0a1a5a)",color:"#4ec9b0"},xmas_cat_vs_tree:{bg:"linear-gradient(135deg,#2d0505,#5a0a0a)",color:"#f44747"},xmas_santa_search_history:{bg:"linear-gradient(135deg,#0a0a2d,#1a1a4a)",color:"#c586c0"},xmas_ai_card:{bg:"linear-gradient(135deg,#2d0505,#5a0a0a)",color:"#ff6b6b"},xmas_pet_complaint:{bg:"linear-gradient(135deg,#2d1a05,#4a2d0a)",color:"#dcdcaa"}};
+var J={thought_bubble:{s:"Owner: Will AGI replace me?",p:"Dog: Will dinner still be at six?"},pet_standup:{s:"So my owner calls themselves a pet parent",p:"You forgot to feed me on Tuesday. I counted."},breaking_news:{s:"BREAKING: Local Man Spotted",p:"Doing Something Competent. Witnesses Shocked."},performance_review:{s:"ANNUAL PERFORMANCE REVIEW",p:"Food Delivery: Inconsistent. Walks: Cancelled 3x."},pet_therapist:{s:"Session Notes:",p:"Owner exhibits one more episode syndrome. Terminal."},search_history:{s:"RECENT SEARCHES:",p:"how to report owner for late dinner"},complaint_dept:{s:"FORMAL COMPLAINT",p:"Subject: Chronic late-feeding. Excessive phone usage."},split_panel:{s:"Human: Will AGI take my job?",p:"Dog: Will the squirrel come back tomorrow?"},incident_report:{s:"INCIDENT REPORT #0032",p:"Subject completed another year. Decline noted."},wildcard:{s:"We saw your pet and had questions.",p:"Here are the answers you didn't know you needed."},xmas_santa_automated:{s:"Merry Christmas!",p:"Your role has been automated."},xmas_santa_vs_robots:{s:"BREAKING:",p:"10 million robots disabled in sleigh attack."},xmas_elf_redundancy:{s:"MEMO: North Pole Restructuring",p:"47 elf positions eliminated after agent deployment."},xmas_pet_security:{s:"SECURITY REPORT:",p:"STRANGER ENTERED VIA CHIMNEY. DOG ACCEPTED BISCUIT."},xmas_performance_review:{s:"CHRISTMAS REVIEW",p:"Turkey: adequate. Walks: unacceptable."},xmas_human_vs_pet:{s:"Human: Will Christmas feel human after AGI?",p:"Dog: Turkey."},xmas_cat_vs_tree:{s:"INCIDENT REPORT",p:"Decorative structure destroyed 14 min after deployment."},xmas_santa_search_history:{s:"Santa reads your search history:",p:"is santa edible / reindeer territorial rights"},xmas_ai_card:{s:"Human: Will Christmas feel human after AGI?",p:"Dog: You bought this card from an AI."},xmas_pet_complaint:{s:"FORMAL COMPLAINT TO SANTA",p:"Requesting replacement owner. Current unit misses feeding windows."}};
+function api(m,u,b){return fetch(u,{method:m,headers:{"Content-Type":"application/json"},body:b?JSON.stringify(b):undefined}).then(function(r){return r.json()})}
+function init(){api("GET","/api/templates").then(function(r){TS=r.templates;buildGrid()})}
+function upl(el){var f=el.files[0];if(!f)return;var rd=new FileReader();rd.onload=function(e){PU=e.target.result;document.getElementById("up").innerHTML='<img src="'+PU+'"><p style="color:#4ec9b0;margin-top:4px">Photo uploaded!</p>';document.getElementById("up").classList.add("done");buildGrid()};rd.readAsDataURL(f)}
+function buildGrid(){var h="";for(var i=0;i<TS.length;i++){var t=TS[i];var j=J[t.id]||{s:t.name,p:"Your pet here"};var c=C[t.id]||C.thought_bubble;h+='<div class="template-card" onclick="openModal(\''+t.id+'\')"><div class="card-preview"><img src="/cards/'+t.id+'.png" alt="" loading="lazy" style="width:100%;height:100%;object-fit:cover;position:absolute;inset:0" onerror="this.remove()"><div class="card-face" style="background:'+c.bg+';color:#fff"><div class="joke-setup">'+j.s+'</div><div class="pet-circle">'+(PU?'<img src="'+PU+'" style="width:100%;height:100%;object-fit:cover;border-radius:50%;border:none">':'&#x1F43E;')+'</div><div class="joke-punch">'+j.p+'</div><div class="brand">ROAST.PET</div></div></div><div class="card-info"><div class="name">'+t.name+'</div><div class="price">\u00A36.49</div></div></div>'}document.getElementById("grid").innerHTML=h}
+function openModal(tid){var j=J[tid]||{s:"Loading...",p:""};var c=C[tid]||C.thought_bubble;document.getElementById("mmodal").innerHTML='<div class="preview-side"><div class="card-full" id="cardfull" style="background:'+c.bg+';color:#fff;display:flex;flex-direction:column;align-items:center;justify-content:center;padding:32px;text-align:center"><div style="font-family:Playfair Display,serif;font-size:24px;font-weight:900;line-height:1.3;margin-bottom:20px">'+j.s+'</div><div style="width:140px;height:140px;border-radius:50%;border:3px dashed rgba(255,255,255,.2);display:flex;align-items:center;justify-content:center;font-size:48px;margin:12px auto">'+(PU?'<img src="'+PU+'" style="width:100%;height:100%;object-fit:cover;border-radius:50%;border:none">':'&#x1F43E;')+'</div><div style="font-size:16px;color:rgba(255,255,255,.7);line-height:1.5;margin-top:16px">'+j.p+'</div><div style="position:absolute;bottom:16px;right:20px;font-size:10px;color:rgba(255,255,255,.3);letter-spacing:2px;text-transform:uppercase">ROAST.PET</div></div></div><div class="info-side"><button class="close-btn" onclick="cm()">&times;</button><h2>'+tid.replace(/_/g," ")+'</h2><div class="tmpl">'+tid+'</div><div class="joke-text"><b>'+j.s+'</b><div class="dim">'+j.p+'</div></div><div class="quote"><div class="row"><span>Card</span><span>\u00A33.50</span></div><div class="row"><span>Shipping</span><span>\u00A32.99</span></div><div class="row tot"><span>Total</span><span>\u00A36.49</span></div></div><button class="btn" onclick="order(\''+tid+'\')">Order \u2014 \u00A36.49</button><button class="btn sec" onclick="dlCard(\''+tid+'\')" style="margin-top:8px">Download as PNG</button><button class="btn sec" onclick="cm()" style="margin-top:8px">Back</button></div>';document.getElementById("mbg").classList.add("on")}
+function cm(){document.getElementById("mbg").classList.remove("on")}
+function order(t){alert("Order placed! Card ships in 5 days. (Sandbox)");cm()}
+function dlCard(tid){var el=document.getElementById("cardfull");html2canvas(el,{scale:2,useCORS:true}).then(function(canvas){var link=document.createElement("a");link.download="roast-pet-"+tid+".png";link.href=canvas.toDataURL("image/png");link.click()})}
+init();
+</script></body></html>

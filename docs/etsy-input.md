@@ -25,7 +25,7 @@
 
 ## Simulator (build now, Meshy stubbed)
 
-`funnylabs/etsy_order.py`: generates faithful fake Etsy orders AND processes them
+`engine/etsy_order.py`: generates faithful fake Etsy orders AND processes them
 through the real pipeline (avatar → card → listing bundle), with Meshy calls
 behind a stub interface. When the real key lands, only the stub swaps — nothing
 else changes.

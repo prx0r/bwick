@@ -1,7 +1,7 @@
 # Pipeline spec — top products via etsysignal engine + Etsy limits (2026-09-25)
 
 Engine: etsysignal `roastpet/` (intake → comedy → generate → cards → listing →
-remotion/video) + funnylabs (gallery, avatars, talk.py MP4). Output builds prove
+remotion/video) + engine (gallery, avatars, talk.py MP4). Output builds prove
 the shape (`output/buster-*/`: avatar, character, card/{front,back,inside,texts,
 photo,prodigi_layout,qr}, final/{front,inside_right PNGs}, listing/{title,tags,
 description,personalization,shotlist,storyboard,thumbs}).

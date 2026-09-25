@@ -1,0 +1,13 @@
+node_modules/
+__pycache__/
+*.pyc
+.env
+.env.local
+dist/
+*.log
+.DS_Store
+/tmp/
+worker/.wrangler/
+*.bak
+test-render*.mjs
+legacy_*

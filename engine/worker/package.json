@@ -1,0 +1,1 @@
+{"name":"roast-pet-studio","private":true,"scripts":{"deploy":"wrangler deploy"},"devDependencies":{"wrangler":"^3.0.0"}}

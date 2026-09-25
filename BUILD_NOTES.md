@@ -2,7 +2,7 @@
 
 ## What's built (runs today)
 
-- funnylabs gallery (20 card PNGs served), avatar store (upload → persistent
+- gallery (20 card PNGs served), avatar store (upload → persistent
   avatar → situations), photo-card compositing, Etsy order simulator
   (`etsy_order.py --demo` GREEN), brick pipeline stubs (`brick.py --demo` GREEN),
   talk.py MP4 (2.5D + voice), R2 backup (8.4K objects / 18GB, validated).
@@ -21,9 +21,17 @@
 
 ## Blockers (need human)
 
-- MESHY_API_KEY (mesh pipeline). Prodigi card/sticker SKUs (pricing).
-- Makr3D account + sample order. Etsy shop connection (Prodigi + Makr3D dashboards).
-- Disk 100% full on build box (freed 3.9G; more available in DROP list).
+- **MESHY_API_KEY** — the critical path. No mesh = no figure, no print, no
+  listing, no video frame. Everything else can build; nothing ships without this.
+- Makr3D account + first test print (STL → live quote → sample → photos).
+- Etsy shop connection (Prodigi + Makr3D dashboards).
+- Disk near-full on build box (freed 3.9G; more in DROP list).
+
+## Keys
+
+- Prodigi: `engine/.env` (local, mode 600, **gitignored — never committed**).
+  Live key, verified working (quotes return real £). Sandbox key is separate.
+- Others: not yet obtained. Put them in `engine/.env` alongside Prodigi.
 
 ## Known overlaps (intentional, don't "fix" by merging)
 
@@ -35,9 +43,8 @@
 
 ## Conventions
 
-- Docs over code until a doc's build section goes green; then code lives with
-  the engine (funnylabs), specs live here. This repo stays the strategy +
-  spec home, not a monorepo.
+- Docs and code both live here: specs in `docs/`, runnable pipeline in `engine/`.
+  One canonical repo. Former `funnylabs` repo is superseded (engine moved in).
 - Prices: verified figures only, marked ✓/Q/EST. Never invent SKU pricing.
 - IP: fandom energy, zero trademarks in titles/tags/descriptions. Check
   trademark.md before any new theme.
