@@ -42,7 +42,7 @@ bob/squash/zoom + audio for cards and video; already shipped in talk.py).
 | 5 | `take-turns` | pair | 15–30s | roast script A/B | shot/reverse-shot | 2.5D heads + alternating audio (shipped pattern) |
 | 6 | `bow` | solo | 3s | applause | low angle | front-leg bow / head dip; reads fine rigid |
 | 7 | `celebrate` | any | 5s | cheer sfx | pull-back | jump + spin; group sync for crews |
-| 8 | `sleep` | solo | loop | lullaby + candle glow | overhead slow drift | curled pose; memorial line (stillness sells it) |
+| 8 | `sleep` | solo | loop | lullaby + candle glow | overhead slow drift | curled pose; calm/rest line (parked, not launched) |
 | 9 | `present` | solo | 5s | gift sting | side reveal | holds/gives gift (mouth/paw prop point); Xmas/birthday |
 | 10 | `walk-in` | solo | 4s | footstep + sting | track-in | enters frame; video intros + AR reveals |
 

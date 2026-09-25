@@ -8,8 +8,8 @@ cards, figures, video, AR. One pet mesh feeds every SKU. Zero inventory.
 Every pet owner buys identity, not objects. A card with *their* dog roasting
 *their* husband outsells any generic funny card; a brick figure of *their* cat
 outsells any shelf toy. Personalization is the product — print, video, and 3D
-are just manifestations. Meshy proved demand ($39–41 pet figures, memorial
-reviews); Etsy proves distribution (8.1k couple figurines, 3.5k $272 wedding
+are just manifestations. Meshy proved demand ($39–41 pet figures, chibi line);
+Etsy proves distribution (8.1k couple figurines, 3.5k $272 wedding
 toppers); nobody combines them with comedy + video + AR.
 
 ## Architecture (settled)
@@ -45,7 +45,7 @@ pet photos (3-4, front + sides)
 5. **Digital**: talking videos, AR kiss/moments (USDZ free with mesh), downloads,
    extra situations. ~100% margin.
 6. **Later**: apparel (weak lane, use Inkthreadable if ever), brick sets,
-   desk-buddy subscription, memorial packages.
+   desk-buddy subscription.
 
 ## Unit economics (per pet, verified credits)
 
@@ -74,7 +74,7 @@ infringement. Same for brick-as-brand.
 
 Cards + Xmas figure set live by mid-Oct (Etsy indexing lead time). Christmas
 templates (10) already rendered. Family/Xmas sets = highest basket. Valentine's
-AR-kiss cards next; funeral/memorial line on standby (proven demand, premium).
+AR-kiss cards next; seasonal packs funded by couples revenue.
 
 ## Repo map (to build)
 

@@ -49,7 +49,7 @@ free API key). Makr3D figures covered separately (see makr3d.md).
 
 ## 3D (Makr3D, not Prodigi — parallel stack)
 
-Mini figures, brick sets, statues, couples/family crews, memorial pieces.
+Mini figures, brick sets, statues, couples/family crews.
 Single-colour PLA £1.29–2.50 ex-VAT; larger/multi US$7.60–10.30 (quote per file).
 Start single/two-tone (multi-colour purge = human quote). EN71 sits with us.
 

@@ -9,7 +9,7 @@ filmed with the pipeline itself (no crew).
 - **Identity**: roast-stage grammar (dark, gold, podium) in name + banner + icon.
   Every thumbnail instantly recognizable in search results.
 - **Sections mirror buying occasions, not org chart**: Birthday Roasts / Wedding
-  & Couples / Pet Memorials / Christmas. Buyers shop occasions.
+  & Couples / Christmas. Buyers shop occasions.
 - **About**: origin story with real emotion (dead-dog shape: real feeling, real
   shelf, real name) + process triptych (photo → preview → doorstep).
 - **Policies that pre-kill 1-stars**: processing times in days (not ranges),
@@ -46,7 +46,7 @@ price + "preview in minutes" card (13–15s).
    screen-record, perform the moment (tap → wave/bow/kiss). Real phone UI in
    frame reads as real product.
 2. Three shots per product: (a) reveal (tap, it moves), (b) couple kiss
-   (noses meet), (c) memorial (stirs, two steps, settles). Each is a standalone
+   (noses meet), (c) celebration (figure dances, confetti sting). Each is a standalone
    10–15s social clip AND a listing-video candidate.
 3. Assemble with ffmpeg (on box): concat, burn subtitles, export vertical
    1080×1920 (TikTok/Reels/Shorts) + square (Etsy). Situation PNGs = thumbnails

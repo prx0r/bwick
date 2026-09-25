@@ -12,7 +12,7 @@ prodigi-tiers.md, makr3d.md.
 | Roast card | Funny singles 10k + 4.3k; Canva template 24.1k @ $3.96; personalization dominates 2026 (Printify) | only card with video/AR + comedy engine |
 | Stickers / tattoos / magnets | #2 Etsy bestseller: 76.88k total, 370/wk; pet party-favor stickers live; pet accessories shop 37.2k sales | pet-face art from existing renders, pennies |
 | Jigsaw | Personalized photo puzzles 11k @ $10.40, 7.8k, 6.1k @ $19.90, 4k @ $30.48, 3.3k @ $14.95; Wentworth premium £33–152 | roast art as puzzle image; lid art from card design |
-| Custom figure (Makr3D) | Couple 8.1k @ $44; wedding hand-painted 3.5k @ $272; single 1.8k/1.6k @ $31–39; pet memorial 105 @ $91; family+dogs 674 @ $39; AI-toy-style 132 @ $35 | AI mesh ($0.20) vs handmade weeks; undercut or match at 90% margin |
+| Custom figure (Makr3D) | Couple 8.1k @ $44; wedding hand-painted 3.5k @ $272; single 1.8k/1.6k @ $31–39; family+dogs 674 @ $39; AI-toy-style 132 @ $35 | AI mesh ($0.20) vs handmade weeks; undercut or match at 90% margin |
 | Digital (video/AR/download) | Planners 8–11k; wedding templates 11.1k; Printify: digital "increasingly important driver" | zero-fulfilment; nobody sells talking-pet video or AR kiss |
 
 ## A tier — confirmed (strong adjacent demand)
@@ -30,8 +30,6 @@ prodigi-tiers.md, makr3d.md.
   + trademark minefields + Inkthreadable dependency. Only if a design demands it.
 - Notebooks / wrapping / invitations: wedding-template demand proven (11.1k) but
   our specific SKUs unproven. Filler only.
-- Memorial premium ($91): demand proven but low volume (105). Keep as high-price
-  option, not a volume line.
 
 ## C tier — skip regardless of demand
 
@@ -42,6 +40,5 @@ unproofed colour-critical fine-art (sample first).
 
 - Calendars promoted to S-for-Q4 (19.9k office-calendar sales + Oct–Dec 2027
   buying window + 10 Xmas templates ready = timing convergence).
-- Memorial demoted to B (price strong, volume thin at 105 — premium option only).
 - Apparel stays B (category strength acknowledged, competitive + IP risk decisive).
 - Everything else held. No tier was killed by the data; two moved on it.

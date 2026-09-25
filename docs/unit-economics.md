@@ -24,7 +24,6 @@ Verified figures marked ✓; estimates marked ~ (confirm via quote before listin
 | Mini figure (s/c PLA) | £29.99 | £0.13 | £1.29–2.50 ✓ | ~£3.50 | ~£3.20 | **~£21–22** | ~72% | 1–2d dispatch + ship |
 | Brick figure | £29.99 | £0.15 | £1.29–2.50 ✓ | ~£3.50 | ~£3.20 | **~£21–22** | ~72% | 1–2d + ship |
 | Couple set (2 figs + card) | £59.99 | £0.26 | ~£5.00 | ~£4.50 | ~£6.10 | **~£44** | ~73% | 1–2d + ship |
-| Memorial box | £79.99 | £0.13 | ~£8.00 | ~£5.00 | ~£8.00 | **~£59** | ~74% | 2–4d + ship |
 | Calendar 2027 | £29.99 | £0.00‡ | ~£6.00 | ~£3.50 | ~£3.20 | **~£17** | ~57% | 3–6d + ship |
 | Talking video / AR / download | £5.00 | £0.00‡ | £0.00 | £0.00 | ~£0.73 | **~£4.27** | ~85% | instant |
 

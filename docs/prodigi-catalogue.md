@@ -10,7 +10,7 @@ Free account gives sandbox + live `X-API-Key`. Etsy integration is native
 |---|---|---|
 | Cards & stationery | Fine Art + Classic greeting cards (Mail2Me/Mail4Me), postcards, custom notebooks | hero card + postcard variant |
 | Stickers | kiss-cut, transparent | bundle sweetener, margin |
-| Wall art | framed/canvas/metal/wood prints, photo tiles, posters | avatar prints, memorial |
+| Wall art | framed/canvas/metal/wood prints, photo tiles, posters | avatar prints |
 | Books & magazines | hardcover/softcover/layflat photo books | "Year in Roasts" annual |
 | Sport & games | **jigsaws** (multi print areas incl. lid!), skateboards | pet puzzle SKU |
 | Technology | phone/tablet cases | avatar merch |

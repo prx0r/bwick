@@ -34,7 +34,7 @@ company 15466679). Hundreds of Bambu printers, 500+ plates/day, 1–2 day dispat
 
 ## Use for us
 
-Pet mini figures / brick figures / couple sets / memorial statues. Our Meshy STL
+Pet mini figures / brick figures / couple sets. Our Meshy STL
 in, white-label parcel out. A palm-size single-colour pet figure should land in
 the US$2–5 fulfilment band (≈£12–25 retail space); multi-colour/larger pieces
 quote live per file — always quote before listing.

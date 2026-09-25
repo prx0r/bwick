@@ -12,7 +12,7 @@ What the character *looks like*. One theme skins every action and video.
 |---|---|---|---|
 | `brick` | Meshy brick endpoint (6+30cr) | minifig proportions, stud details | hero figure line |
 | `chibi` | Meshy image-to-3D + chibi texture prompt | big-head, impulse price | mini line |
-| `real` | Meshy multi-image (identity-first) | photoreal PBR | memorial, wedding premium |
+| `real` | Meshy multi-image (identity-first) | photoreal PBR | wedding premium, couples |
 | `toon` | 2D PIL render (already built) | flat roast.pet house style | cards, stickers |
 | `wizard` / `galaxy` / seasonal | theme overlay on any base (hat, robe, backdrop, palette) | fandom energy, no trademarks | Xmas, Halloween, Valentine's |
 
@@ -27,13 +27,13 @@ scan-to-play (QR on card/packaging → AR or video of the action).
 | Action | Roles | Duration | Audio slot | Physical binding |
 |---|---|---|---|---|
 | `kiss` | pair | 4s | smooch sfx / song clip | Valentine's/anniversary card + couple figures |
-| `hug` | pair/group | 4s | warm sting | family set, memorial |
+| `hug` | pair/group | 4s | warm sting | family set |
 | `wave` | solo | 3s | greeting line | all figures (default alive state) |
 | `dance` | solo/pair/group | 8s | music bed | party, stag/hen, Xmas |
 | `take-turns` | pair | 15–30s | roast script A/B | roast battle video + card |
 | `bow` | solo | 3s | applause | performer/thank-you |
 | `celebrate` | any | 5s | cheer sfx | birthday, graduation, new job |
-| `sleep` | solo | loop | lullaby / silence + candle glow | memorial line |
+| `sleep` | solo | loop | lullaby / silence + candle glow | calm/rest line (parked) |
 | `present` | solo | 5s | gift sting | Xmas, birthday (holds out gift) |
 | `walk-in` | solo | 4s | footstep + sting | video intros, AR reveals |
 
@@ -82,7 +82,5 @@ this" (acquisition asset + product itself).
   listing + full cut via QR) + Prodigi card + sticker insert.
 - Xmas family set: theme `wizard` + actions `present` + `celebrate` + video
   (carol sting, 3 formats) + Prodigi cards + Makr3D figures.
-- Memorial: theme `real` + action `sleep` + video (tribute cut, captions) +
-  framed print + keychain figure.
 - Stag roast battle: theme `toon` + action `take-turns` ×3 rounds + video
   (full edit + teaser clips for the group chat) + cards for the table.

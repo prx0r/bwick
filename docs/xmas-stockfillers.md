@@ -2,7 +2,7 @@
 
 Thesis: cheap cheerful SKUs aren't the profit center — they're the review engine.
 Low price → high volume → many reviews → Star Seller + ranking → premium lines
-(figures £25–40, memorial £60+) convert on that social proof. Every stocking
+(figures £25–40, couples £45+) convert on that social proof. Every stocking
 filler carries the QR video/AR moment competitors can't match, turning a £3
 sticker into a 5-star photo review.
 
