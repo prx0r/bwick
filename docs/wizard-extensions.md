@@ -25,8 +25,13 @@ Best matches, all zero new pipeline:
   → **SPELLBOOKS.** The single strongest wizard item in their catalogue.
 - **Playing cards** (confirmed in their print-templates list) → wizard deck.
 - **Pendants** → wand/talisman jewellery.
-- **Metal pet tags** → familiar name tag (name + breed engraved).
-- **Pet bandanas / dog bandanas** → wizard bandana for the familiar.
+- **Metal pet tags** → familiar name tag (name + breed engraved). **LIVE-QUOTED:**
+  `PET-MET-BONE` + `PET-MET-ROUND` = item £5.00 + ship £4.30 = **£11.16 all-in**.
+  Note: Prodigi has NO collars (sitemap = dog-bandanas, metal-pet-tags, pet-beds
+  only) — tag hangs on the buyer's own collar. Two shapes = two variants.
+- **Dog bandanas** → wizard bandana for the familiar. **LIVE-QUOTED:**
+  `PET-BANDANA-SML/MED` item £6.00, `-LRG` £7.00 (+ship £4.30) =
+  **£12.36 / £13.56 all-in**.
 - **Wooden coasters** → potion/coaster set.
 - **Candles** → cauldron candle.
 - **Photo mugs / magic photo mugs / latte mugs** → potion mug.
@@ -60,6 +65,19 @@ at €60 with 2,864 reviews (ElkoyTCG).
 **First move**: check Prodigi's own playing-card SKUs before adding a supplier —
 their catalogue already lists playing cards, and one supplier beats two. MPC or
 the UK shop if Prodigi can't do a deck.
+
+### MyTradingCards.com — verdict (researched 2026-09-25)
+
+Credentials are real: trading since 2006, 179,309 cards made, 10M+ printed,
+real commercial press (explicitly not inkjet/laser), 18pt stock, UV both sides,
+Fremont CA. No independent reviews found — site claims only. Price ladder:
+**$5.50 single → $5.00 @2–99 → $4.00 @100+ → $0.70 @300+ → $0.275 @25k** (set of
+identical; decks of different cards priced separately).
+
+Blocker for us: **manual ordering only** (cloud link → they invoice), no API, no
+Etsy integration, 4–5 day production (2-day rush extra). Good for a test batch
+and great at volume unit cost; not automatable for per-order custom cards.
+Verdict: use for bulk/season runs, MPC for automation.
 
 ## Recommendation order
 
