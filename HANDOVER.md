@@ -7,7 +7,9 @@
 
 One canonical repo for a personalised pet-universe business: photo → avatar →
 printable figure / card / video / AR. Brand **Figg**; three lines (**Roast /
-Mystic / Holiday**); five products (dog, cat, solo, couple, family+pet).
+Mystic / Holiday**); four products (pet, couple, solo+pet familiar, solo).
+**Hard rule: max two meshes per order — family sets are cut** (returns in a year
+as a collector play only if demand begs).
 Zero inventory: Meshy makes the mesh, Prodigi prints flat, Makr3D prints 3D,
 Etsy sells, everything else is digital.
 

@@ -8,18 +8,17 @@
 
 Five listings clusters to rank, one pipeline to run, one QA bar. Everything else
 (keychains, stickers, cards, ornaments, toppers, tattoos) is a context or
-accessory on these five, not a sixth product. Prices TBD per SKU (see pricing
+accessory on these four, not a fifth product. Prices TBD per SKU (see pricing
 section); no prices locked here per instruction.
 
-## The five
+## The four (max two meshes per order — family cut)
 
-1. **Dog** — solo pup figures, ornaments, cards, stickers. Most orders. Engine product.
-2. **Cat** — same engine, same prices (equality, simplicity). Second volume.
-3. **Solo** — brick human, any universe skin. Self-gift, desk, grad, hobby.
+1. **Pet** — solo pup/cat figures, ornaments, cards, stickers. Engine + volume. Dogs and cats, one line, same prices.
+2. **Solo** — brick human, any universe skin. Self-gift, desk, grad, hobby.
+3. **Solo + pet familiar** — the signature combo; highest emotion per order.
 4. **Couple** — two avatars, shared scene, AR kiss. Valentine's/anniversary/wedding.
-5. **Family (+pet)** — crew that grows, add-a-member at fixed price, forever expandable.
 
-## Contexts (not products — attach to the five)
+## Contexts (not products — attach to the four)
 
 Keychain, magnet, sticker sheet, tattoo sheet, ornament hook, plinth, spike pick,
 gift box, postcard, QR insert. Each context = mount + packaging + price delta on

@@ -1,6 +1,12 @@
-> **STATUS: CURRENT** — annotated 2026-09-26.
+> **STATUS: PARTIAL** — annotated 2026-09-26.
 >
-> AUTHORITATIVE on brand naming: BWICK/BWITCH/BWICKMAS retired, Figg + Roast/Mystic/Holiday.
+> **Still AUTHORITATIVE on brand naming:** BWICK/BWITCH/BWICKMAS retired,
+> Figg + Roast/Mystic/Holiday. Never superseded on naming.
+>
+> **STALE on products:** the 15-item list below predates the 4-product lock in
+> `canonical.md` — **Family rows are cut** (pet, couple, solo+pet, solo only;
+> max two meshes per order). Treat the Family rows and "add-a-member base"
+> as struck-through history, not catalog.
 >
 > Do not delete this file. Delete/merge only after the superseding file says so.
 

@@ -78,7 +78,7 @@ carries a **QR binding** → scans to that order's AR moment and/or video.
 | Jigsaw | box lid QR | completed-puzzle reveal video |
 | Calendar | 12 QRs, one per month page | 12 monthly moments (seasonal pack engine) |
 | Mug/cushion/phone | packaging insert (print can't carry QR well on curved/cushion) | avatar greeting |
-| Couple/family set | shared base + gift box | kiss/hug moment |
+| Couple set | shared base + gift box | kiss/hug moment |
 | Digital video | description link + end card | full cut (already digital) |
 
 **Viewer stack (all free, no app install for buyer):**

@@ -8,8 +8,8 @@
 
 Personalized pet universe: upload once, own the character, monetize across
 cards, figures, video, AR. One pet mesh feeds every SKU. Zero inventory.
-Brand **Figg** · lines **Roast / Mystic / Holiday** · five products
-(dog, cat, solo, couple, family+pet).
+Brand **Figg** · lines **Roast / Mystic / Holiday** · four products
+(pet, couple, solo+pet, solo — max two meshes per order; family cut).
 
 ONE canonical repo: `engine/` (runnable pipeline) + `docs/` (specs) + root
 strategy files. Former `funnylabs` repo is superseded.

@@ -25,7 +25,7 @@ energy, zero IP. (Harry Potter itself stays unnamed for the same reason.)
 
 ## Tier 2 — rising / niche-strong (watchlist + opportunistic skins)
 
-- **Spy × Family**: family-gift angle maps 1:1 onto couples/family sets.
+- **Spy × Family**: family-gift angle maps onto couples/family sets. *(Note: family sets cut from the product line — 4-product lock, max 2 meshes. This universe now maps to couples.)*
 - **Genshin / Fate GO**: gacha spenders = proven wallet-open behavior; elemental colorways.
 - **Blue Lock**: football anime + UK football overlap — derby-day gift line.
 - **Gachiakuta / Kagurabachi**: new Jump power generation (anime Apr 2027 for

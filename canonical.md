@@ -20,19 +20,24 @@ standalone system docs.** Collections stay in `bwizards.md` / `bwickmas.md` /
 CHARACTER TYPE      OUTPUT BUNDLE                  REUSABLE FORMATS
 solo            ┐   physical figure / display     desk display
 couple          ├─  printed backdrop / frame      ornament
-solo + pet      │   nameplate / title plaque      card + QR
-family / duo    ┘   QR animation                  premium couple display
+solo + pet      ┘   nameplate / title plaque      card + QR
+                                          QR animation   premium couple display
 ```
 
 Not 12 custom products. You are building:
 **1 solo base · 1 couple base · 1 ornament mount · 1 backdrop system · 1 QR video system.**
 Tarot / Wizard / Xmas are **scene packs** — that is the whole trick.
 
+**HARD CONSTRAINT: max two meshes per order, ever.** One character + one pet, or
+two people. This single rule kills preview-time risk, pricing complexity,
+composition chaos and photo-herding. Family was cut for this reason — it returns
+in a year as a collector play only if demand begs. Until then it does not exist.
+
 ## 2. Glossary (the only definitions — use these words everywhere)
 
 | Term | Definition |
 |---|---|
-| **Character type** | solo, couple, solo+pet, family/duo. Drives base choice. |
+| **Character type** | solo, couple, solo+pet. **Never more than 2 meshes per order.** Drives base choice. |
 | **Product format** | desk display, ornament, card+QR, premium couple display. |
 | **Scene pack** | One collection's full visual kit: costume_pack + prop_pack + backdrop_pack + palette + copy_pack. Tarot / Wizard / Xmas. |
 | **Costume pack** | The character's outfit, from the scene pack. |
@@ -75,16 +80,19 @@ Tarot / Wizard / Xmas are **scene packs** — that is the whole trick.
 - Order flow: `funnylabs/etsy_order.py` becomes a config interpreter, not a
   per-product script.
 
-## 4. Five products (the whole catalogue)
+## 4. Four products (the whole catalogue)
 
-1. **Dog** — engine. Solo pups, ornaments, cards, stickers.
-2. **Cat** — same line, feline SKUs.
-3. **Solo** — single human, any scene pack.
-4. **Couple** — pair + shared scene + AR moment.
-5. **Family (+pet)** — grows via add-a-member.
+1. **Pet** — the engine and volume king. Dogs and cats, one line, same SKUs
+   (figures, ornaments, cards, stickers). Validated by testing, not theory.
+2. **Couple** — pair + shared scene + AR moment. Premium romance lane.
+3. **Solo + pet familiar** — the signature combo. Highest emotion per order,
+   and it's the only product your competitors structurally can't copy well.
+4. **Solo** — single human, any scene pack. Entry point: birthdays, self-gifts.
+
+**Family is cut** (not "later" — *out*). Max two meshes per order is a hard rule.
 
 Everything else (keychains, stickers, cards, ornaments, toppers, tattoos) is a
-**context** on one of these five — never a sixth product.
+**context** on one of these four — never a fifth product.
 
 ## 5. Collections = scene packs
 
