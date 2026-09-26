@@ -26,7 +26,9 @@ strategy files. Former `funnylabs` repo is superseded.
 ## File map with status
 
 **Root — CURRENT:** `HANDOVER.md` · `thisisit.md` · `canonical.md` ·
-`streamlined.md` · `AGENTS.md` · `BUILD_NOTES.md` · `ideas.md`
+`MESH_PIPELINE.md` (build map: photo → normalise → Meshy → post-mesh → video/AR/print) ·
+`concepts.md` (36-concept library) · `productlist1.md` · `streamlined.md` ·
+`AGENTS.md` · `BUILD_NOTES.md` · `ideas.md`
 
 **Root — PARTIAL:** `VISION.md` (pre-rename labels) · `STACK.md` (PETSY-era
 header, pre-decision prices)

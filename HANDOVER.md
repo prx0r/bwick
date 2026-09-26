@@ -17,16 +17,17 @@ Etsy sells, everything else is digital.
 
 1. **`thisisit.md`** — the special one-pager. Three collections, one display format.
 2. **`canonical.md`** — THE product system: glossary, config schema, 7 launch listings. **Everything else defers to its vocabulary.**
-3. **`concepts.md`** — our 36-concept library (3 worlds × 4 categories × 3). Composition rules live here.
-4. `VISION.md` + `STACK.md` — thesis, locked SKUs, suppliers, margins.
-5. `streamlined.md` — brand naming (authoritative: BWICK/BWITCH/BWICKMAS are dead as names).
-6. `BUILD_NOTES.md` — what's built vs specced vs blocked.
-7. `docs/` — specs. Every file carries a **STATUS** header (CURRENT / PARTIAL / STALE / SUPERSEDED); read the header before trusting a number.
-8. `productlist1.md` — upstream concept-art retrieval rules (assets NOT in repo).
+3. **`MESH_PIPELINE.md`** — THE build map for mesh production: photo intake, normalisation, Meshy call, post-mesh gates, video + AR + print. Ordered next-steps at the bottom.
+4. **`concepts.md`** — our 36-concept library (3 worlds × 4 categories × 3). Composition rules live here.
+5. `VISION.md` + `STACK.md` — thesis, locked SKUs, suppliers, margins.
+6. `streamlined.md` — brand naming (authoritative: BWICK/BWITCH/BWICKMAS are dead as names).
+7. `BUILD_NOTES.md` — what's built vs specced vs blocked.
+8. `docs/` — specs. Every file carries a **STATUS** header (CURRENT / PARTIAL / STALE / SUPERSEDED); read the header before trusting a number.
+9. `productlist1.md` — upstream concept-art retrieval rules (assets NOT in repo).
 
-## Doc status summary (52 files, all annotated in-place)
+## Doc status summary (53 files, all annotated in-place)
 
-- **CURRENT (33)** — trust as written. Supplier facts verified live (Meshy API
+- **CURRENT (34)** — trust as written. Supplier facts verified live (Meshy API
   docs, Prodigi v4 quotes, Makr3D published GBP); Etsy demand figures cited.
 - **PARTIAL (11)** — structure still good, numbers/labels superseded:
   `VISION.md`, `STACK.md` (PETSY-era name + pre-decision prices),
@@ -47,8 +48,9 @@ Etsy sells, everything else is digital.
 
 ## What is built and green
 
-**Docs (52 files):** full annotation pass complete — every file carries a
-STATUS header; `canonical.md` merged the three system docs; `concepts.md` holds
+**Docs (53 files):** full annotation pass complete — every file carries a
+STATUS header; `MESH_PIPELINE.md` is the next agent's build map (photo intake →
+normalise → Meshy → post-mesh → video/AR/print); `canonical.md` merged the three system docs; `concepts.md` holds
 the 36-concept library; `delivery-experience.md` (QR-embossed-in-base + Act
 One/Act Two split shipping); the 4-product lock is applied consistently across
 all current files (verified by grep).
