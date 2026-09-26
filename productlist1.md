@@ -7,7 +7,8 @@
 >
 > **Conflicts with the 4-product lock** (`canonical.md` §4): entries with
 > `kind: family` (BWZ-19..22 and equivalents) are **non-sellable** — families
-> are cut, max two meshes per order. Keep them as visual reference only.
+> are cut, three identity meshes max (couple+pet variant allowed — see `PROPS.md`).
+> Keep them as visual reference only.
 >
 > **Names are internal only:** BWIZARD/BWITCH/BWICKMAS are retired as brands
 > (`streamlined.md`) — never in listings, shop names or titles.

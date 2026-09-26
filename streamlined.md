@@ -5,7 +5,7 @@
 >
 > **STALE on products:** the 15-item list below predates the 4-product lock in
 > `canonical.md` — **Family rows are cut** (pet, couple, solo+pet, solo only;
-> max two meshes per order). Treat the Family rows and "add-a-member base"
+> three identity meshes max, couple+pet variant allowed per `PROPS.md`). Treat the Family rows and "add-a-member base"
 > as struck-through history, not catalog.
 >
 > Do not delete this file. Delete/merge only after the superseding file says so.

@@ -8,8 +8,9 @@
 One canonical repo for a personalised pet-universe business: photo → avatar →
 printable figure / card / video / AR. Brand **Figg**; three lines (**Roast /
 Mystic / Holiday**); four products (pet, couple, solo+pet familiar, solo).
-**Hard rule: max two meshes per order — family sets are cut** (returns in a year
-as a collector play only if demand begs).
+**Hard rule: max three identity meshes per order — family sets are cut.**
+Couple may add a pet (+£, third mesh); baby and identity-free bits ride as
+props. See `PROPS.md`.
 Zero inventory: Meshy makes the mesh, Prodigi prints flat, Makr3D prints 3D,
 Etsy sells, everything else is digital.
 
@@ -93,5 +94,6 @@ Systemd timer: daily collection. R2 backup validated (8.4K objects / 18GB).
 Preview-before-print on every custom SKU · mild roast default for office SKUs ·
 IP gate before any listing (`trademark.md` + `ip_check: pass` in config) ·
 no franchise wording · 30%+ economics or documented exception · one owner per SKU ·
-**max two meshes per order, no family sets** · memorial parked, not this Q4 ·
+**max three identity meshes (couple+pet allowed; family cut), props never
+count · memorial parked, not this Q4 ·
 evidence-graded prices (✓/Q/EST) · no secrets in git.

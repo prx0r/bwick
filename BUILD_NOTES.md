@@ -15,21 +15,62 @@
 - Live Prodigi quoting through MCP (`funny.quote_card` returns real £).
 - Live timers: powstock daily collection; powops health monitoring.
 
-## What's specced, not built (in priority order)
+## What's specced, not built — the full remaining work (priority order)
 
-1. **Concept library assets**: `boards/` + `tiles/` + `catalog.json` from
-   `concepts.md` (36 IDs) + `PRP-*` props (`productlist1.md` build order 1–3).
-2. **`compose()`** — reads `catalog.json`, emits design prompt + shot list,
-   enforces immutable identity + 2-mesh ceiling (`concepts.md` rules).
-3. Meshy key → real pet mesh (multi-image, 30cr) → rig/AR/print fan-out.
-4. **QR embossed in the figure base** (Bambu in-slicer text tool; `delivery-experience.md` §1)
-   — replaces packaging inserts for figure SKUs. Test-scan at 30cm before approving.
-5. Card-studio Perform button → talk.py wiring in gallery.
-6. Model-viewer AR page + per-order binding (`brick.py` template exists, URLs pending).
-7. Prodigi SKUs (6 needed from dashboard) → live prices for full S tier.
-8. Makr3D account + first test print (STL → quote → sample → photos).
-9. Etsy listings (listing-001 ornament drafted; needs mesh renders + print photos).
-10. Mount library CAD (socket dims, spike/loop/plinth/magnet/ring — spec'd, not modeled).
+Detail for 1–6 lives in `MESH_PIPELINE.md`; props in `PROPS.md`.
+
+### A. Production line (mesh) — nothing ships until A1–A4
+
+1. `engine/normalise.py` — EXIF orient, validate, role-sort (front first),
+   size guard, emit `image_urls[]` base64. Reuse `photo_role_policy.json` +
+   `photo_qc.py`; don't reinvent. **Testable today against the etsysignal sample
+   uploads — no key needed. This is the right first build.**
+2. Two **Q** marks to confirm at Meshy signup: free-tier credit terms; exact
+   image size/dimension limits.
+3. `MESHY_API_KEY` → real pet mesh (multi-image, 30cr, `target_formats:["glb"]`,
+   `multi_view_thumbnails:true`).
+4. Post-mesh gates + store: download URLs **immediately** (they expire) into
+   `engine/pets/{id}/` — glb + textures + thumbnails, checksummed,
+   `print-ready` flag only after gates pass (GLB parses / 2mm walls / face count).
+
+### B. Surround (built once the mesh exists)
+
+5. USDZ converter (headless Blender, GLB→USDZ) — iOS AR needs it; brick output
+   has no USDZ.
+6. Turntable renderer (headless, mesh → N frames → MP4) + `video.py` wiring so
+   studio "Perform" calls `talk.py` (teaser + full cut from one render).
+7. AR page: fill the `MESH-PENDING` slots in `brick.py` with real GLB/USDZ URLs;
+   per-order UUID binding (`/a/{uuid}` → pet → mesh → action).
+8. QR embossed in figure base (Bambu in-slicer text tool, `delivery-experience.md` §1);
+   test-scan at 30cm before approving the print profile.
+9. Blender headless script: turntable + USDZ + (later) mesh-frame renders.
+
+### C. Concept library (enables `compose()`)
+
+10. `boards/` + `tiles/` from the concept art → generate `catalog.json` from
+    `concepts.md` (36 IDs) + `PRP-*` props.
+11. `compose()` → design prompt + shot list; enforce immutable identity + ≤3
+    identity meshes + `ip_check: pass` before any listing packs.
+12. Verify prop geometry before treating any `PRP-*` as a bill of materials.
+
+### D. Physical product
+
+13. Mount library CAD (socket dims; spike/loop/plinth/magnet/ring) — spec'd, not modeled.
+14. Prop library geometry (standard props) + **custom-prop quote flow**
+    (simple £5 / detailed £10–15 / hero £20+, own SLA — `PROPS.md`).
+15. Makr3D account → first live quote on a real STL → sample order → hold +
+    photograph (lifestyle/scale/box shots for listing-001).
+16. Couple+pet variant: base accepts a third identity mesh (+£ pricing delta).
+
+### E. Commercial
+
+17. Prodigi SKUs from dashboard (6 still needed) → live prices for Tier-S.
+18. Etsy shop + Prodigi/Makr3D dashboard connections (disclose production partners).
+19. Listings: `listing-001-ornament` drafted; needs mesh renders + print photos.
+20. Traffic engine: daily posting of video/AR clips (the reviews flywheel —
+    currently unspecced anywhere; see `xmas-stockfillers.md` mechanics).
+21. Open decision: which line owns the Christmas SKUs overlapping Roast
+    (`streamlined.md` open question).
 
 ## Blockers (need human)
 

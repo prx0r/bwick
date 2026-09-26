@@ -134,7 +134,9 @@ compose(world, category, variation_id, photos[], names[]) ->
 1. `photos[]` → **immutable identity** (face, coat markings). Scene, costume,
    props and backdrop are overlays. Never regenerate identity.
 2. `category` decides base: `solo`→single, `couple`→couple,
-   `solo_pet`→single + pet plinth, `pet`→single. **Never >2 meshes.**
+   `solo_pet`→single + pet plinth, `pet`→single.
+   **`couple` accepts a pet variant → 3 identity meshes** (`PROPS.md`).
+   **Never >3 identities.** Props (baby, pram, teddy, tree) never count.
 3. Cross-links allowed (WZ-C2 ↔ WZ-P1) as *separate products in one scene pack*,
    promoted as a bundle — never one order.
 4. Props: candidate only. Geometry verified before it becomes a bill of materials.

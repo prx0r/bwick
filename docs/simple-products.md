@@ -7,8 +7,9 @@
 # Simple products — who it's for (2026-09-25)
 
 Four products. Every theme, season, and SKU plugs into one of them. If a new
-idea doesn't fit these four, it doesn't ship. **Hard rule: max two meshes per
-order — no family sets.**
+idea doesn't fit these four, it doesn't ship. **Hard rule: max three identity
+meshes — no family sets. Couple may add a dog as a variant (+£); baby and
+other identity-free items are props (free, unlimited). See `PROPS.md`.**
 
 1. **Pet** — the engine and volume king. Dogs and cats in one line: figures,
    ornaments, cards, stickers. Same prices for both (equality, simplicity).

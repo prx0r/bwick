@@ -11,7 +11,7 @@ Five listings clusters to rank, one pipeline to run, one QA bar. Everything else
 accessory on these four, not a fifth product. Prices TBD per SKU (see pricing
 section); no prices locked here per instruction.
 
-## The four (max two meshes per order — family cut)
+## The four (max three identity meshes; family cut)
 
 1. **Pet** — solo pup/cat figures, ornaments, cards, stickers. Engine + volume. Dogs and cats, one line, same prices.
 2. **Solo** — brick human, any universe skin. Self-gift, desk, grad, hobby.

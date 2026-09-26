@@ -28,10 +28,17 @@ Not 12 custom products. You are building:
 **1 solo base · 1 couple base · 1 ornament mount · 1 backdrop system · 1 QR video system.**
 Tarot / Wizard / Xmas are **scene packs** — that is the whole trick.
 
-**HARD CONSTRAINT: max two meshes per order, ever.** One character + one pet, or
-two people. This single rule kills preview-time risk, pricing complexity,
-composition chaos and photo-herding. Family was cut for this reason — it returns
-in a year as a collector play only if demand begs. Until then it does not exist.
+**HARD CONSTRAINT: max three identity meshes per order** (revised 2026-09-26,
+authorized — see `PROPS.md`). Identity mesh = geometry derived from a customer
+photo where likeness *is* the product (human faces, pet faces). **Props never
+count** — a baby, a pram, a tree, a teddy are style, not likeness.
+
+Couple + dog = 3 and is now allowed (as a *variant on the couple listing*, not
+a fifth product). Family = 4+ identities and remains cut — returns in a year as
+a collector play only if demand begs. Until then it does not exist.
+
+This rule exists to hold preview time, pricing simplicity, composition sanity
+and a single buyer photo session. It was never about counting triangles.
 
 ## 2. Glossary (the only definitions — use these words everywhere)
 
@@ -89,7 +96,9 @@ in a year as a collector play only if demand begs. Until then it does not exist.
    and it's the only product your competitors structurally can't copy well.
 4. **Solo** — single human, any scene pack. Entry point: birthdays, self-gifts.
 
-**Family is cut** (not "later" — *out*). Max two meshes per order is a hard rule.
+**Family is cut** (not "later" — *out*). Max three identity meshes per order is
+the hard rule; **couple may add a pet as a variant** (+£, third mesh — `PROPS.md`).
+Baby and everything identity-free rides as props, unlimited and free.
 
 Everything else (keychains, stickers, cards, ornaments, toppers, tattoos) is a
 **context** on one of these four — never a fifth product.
