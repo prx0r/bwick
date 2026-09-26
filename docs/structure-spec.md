@@ -1,3 +1,6 @@
+> **SUPERSEDED by `/canonical.md`.** Kept as history — do not edit, do not follow.
+> The canonical glossary/schema/launch list lives in `canonical.md`.
+
 # Structure spec — theme × actions × videos
 
 The product configurator model. Every shippable = theme + action(s) + video

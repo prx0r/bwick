@@ -41,6 +41,7 @@
 
 | File | Why |
 |------|-----|
+| **canonical.md** | **THE product system — glossary, schema, 7 listings. Read first. Supersedes structure-spec + tarot-spec.** |
 | VISION.md / STACK.md | thesis + locked SKUs/margins — decisions live here |
 | BUILD_NOTES.md | built vs specced vs blocked — start here each session |
 | ideas.md | inbox — graduate or kill, never silent-delete |

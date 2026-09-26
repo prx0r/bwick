@@ -35,6 +35,9 @@
 
 ## Known overlaps (intentional, don't "fix" by merging)
 
+- **Resolved:** `canonical.md` merged the three system docs (structure-spec,
+  tarot-spec, scene-pack) into one glossary + schema + 7-launch list. Those two
+  are now banner-marked superseded — history only, do not edit or follow.
 - products.md vs STACK.md (strategy vs locked SKUs); tiers-validated vs
   prodigi-tiers (demand evidence vs catalogue ranks); xmas-stockfillers vs
   secret-santa-spec (seasonal SKUs vs shelf spec); meshy-brick vs meshy-pet

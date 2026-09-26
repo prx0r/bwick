@@ -1,3 +1,6 @@
+> **SUPERSEDED by `/canonical.md`.** Kept as history — do not edit, do not follow.
+> The canonical glossary/schema/launch list lives in `canonical.md`.
+
 # Tarot line — spec (2026-09-25)
 
 ## The reframe (important: conflicts with our locked strategy otherwise)
