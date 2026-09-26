@@ -1,7 +1,20 @@
-# AGENTS.md — bwick operations
+# AGENTS.md — repo operations
 
-> Personalized pet universe. ONE canonical repo: strategy + specs + engine
-> all live here. Read VISION.md first, STACK.md second.
+> Personalized pet universe. Brand: **Figg** (bwick / bwitch / bwickmas are
+> RETIRED as brand names — see `streamlined.md`). Three lines: **Roast /
+> Mystic / Holiday**. ONE canonical repo: strategy + specs + engine all live
+> here. Read `canonical.md` first, then VISION.md, then STACK.md.
+
+## Brand & naming rules (hard)
+
+- Never use **BWICK, BWITCH, BWICKMAS** as a brand, shop name, or listing title —
+  all three are taken by others (doppelgänger creator brand / $18M lingerie brand).
+- Use **Figg** as the brand; the three lines are **Roast line, Mystic line,
+  Holiday line** (neutral descriptors, always with "line" or plain nouns).
+- Docs named `bwizards/bwickmas/bwitch.md` use retired labels internally —
+  read them as Mystic/Holiday/Roast skins, and never ship those names publicly.
+- GitHub repo `prx0r/bwick` is an internal codename only (rename to `figg`
+  optional; nothing technical depends on it).
 
 ## What this repo is (and isn't)
 
@@ -42,6 +55,7 @@
 | File | Why |
 |------|-----|
 | **canonical.md** | **THE product system — glossary, schema, 7 listings. Read first. Supersedes structure-spec + tarot-spec.** |
+| **streamlined.md** | brand retirement (Figg) + the 15 remapped to Roast/Mystic/Holiday lines |
 | VISION.md / STACK.md | thesis + locked SKUs/margins — decisions live here |
 | BUILD_NOTES.md | built vs specced vs blocked — start here each session |
 | ideas.md | inbox — graduate or kill, never silent-delete |
