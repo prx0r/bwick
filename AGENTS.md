@@ -61,6 +61,7 @@
 | File | Why |
 |------|-----|
 | **canonical.md** | **THE product system — glossary, schema, 7 listings. Read first. Supersedes structure-spec + tarot-spec.** |
+| **DEVPLAN.md** | **phases, offline tests, validation gates G1-G6, promo/AR/Etsy showcase** |
 | **MESH_PIPELINE.md** | **THE build map — photo intake, normalisation, Meshy call, post-mesh gates, video/AR/print. Ordered next-steps.** |
 | **concepts.md** | 36-concept library (3 worlds × 4 categories × 3) + compose() rules |
 | **streamlined.md** | brand retirement (Figg) + the 15 remapped to Roast/Mystic/Holiday lines |

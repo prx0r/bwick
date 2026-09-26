@@ -18,17 +18,18 @@ Etsy sells, everything else is digital.
 
 1. **`thisisit.md`** — the special one-pager. Three collections, one display format.
 2. **`canonical.md`** — THE product system: glossary, config schema, 7 launch listings. **Everything else defers to its vocabulary.**
-3. **`MESH_PIPELINE.md`** — THE build map for mesh production: photo intake, normalisation, Meshy call, post-mesh gates, video + AR + print. Ordered next-steps at the bottom.
-4. **`concepts.md`** — our 36-concept library (3 worlds × 4 categories × 3). Composition rules live here.
-5. `VISION.md` + `STACK.md` — thesis, locked SKUs, suppliers, margins.
-6. `streamlined.md` — brand naming (authoritative: BWICK/BWITCH/BWICKMAS are dead as names).
-7. `BUILD_NOTES.md` — what's built vs specced vs blocked.
-8. `docs/` — specs. Every file carries a **STATUS** header (CURRENT / PARTIAL / STALE / SUPERSEDED); read the header before trusting a number.
-9. `productlist1.md` — upstream concept-art retrieval rules (assets NOT in repo).
+3. **`DEVPLAN.md`** — phases, offline test suite, validation gates G1–G6, promo/AR/Etsy showcase.
+4. **`MESH_PIPELINE.md`** — THE build map for mesh production: photo intake, normalisation, Meshy call, post-mesh gates, video + AR + print. Ordered next-steps at the bottom.
+5. **`concepts.md`** — our 36-concept library (3 worlds × 4 categories × 3). Composition rules live here.
+6. `VISION.md` + `STACK.md` — thesis, locked SKUs, suppliers, margins.
+7. `streamlined.md` — brand naming (authoritative: BWICK/BWITCH/BWICKMAS are dead as names).
+8. `BUILD_NOTES.md` — what's built vs specced vs blocked.
+9. `docs/` — specs. Every file carries a **STATUS** header (CURRENT / PARTIAL / STALE / SUPERSEDED); read the header before trusting a number.
+10. `productlist1.md` — upstream concept-art retrieval rules (assets NOT in repo).
 
-## Doc status summary (53 files, all annotated in-place)
+## Doc status summary (55 files, all annotated in-place)
 
-- **CURRENT (34)** — trust as written. Supplier facts verified live (Meshy API
+- **CURRENT (36)** — trust as written. Supplier facts verified live (Meshy API
   docs, Prodigi v4 quotes, Makr3D published GBP); Etsy demand figures cited.
 - **PARTIAL (11)** — structure still good, numbers/labels superseded:
   `VISION.md`, `STACK.md` (PETSY-era name + pre-decision prices),
@@ -49,7 +50,7 @@ Etsy sells, everything else is digital.
 
 ## What is built and green
 
-**Docs (53 files):** full annotation pass complete — every file carries a
+**Docs (55 files):** full annotation pass complete — every file carries a
 STATUS header; `MESH_PIPELINE.md` is the next agent's build map (photo intake →
 normalise → Meshy → post-mesh → video/AR/print); `canonical.md` merged the three system docs; `concepts.md` holds
 the 36-concept library; `delivery-experience.md` (QR-embossed-in-base + Act
