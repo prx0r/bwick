@@ -1,3 +1,9 @@
+> **STATUS: PARTIAL** — annotated 2026-09-26.
+>
+> 5 products + contexts + Etsy fee math ($0.20+6.5%+~3%) still valid. STALE: pricing-framework section superseded by pricing-analysis Model A (ship absorbed, 30% net) decision.
+>
+> Do not delete this file. Delete/merge only after the superseding file says so.
+
 # Product catalogue — 5 products, contexts, pricing (2026-09-25)
 
 Five listings clusters to rank, one pipeline to run, one QA bar. Everything else

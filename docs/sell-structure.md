@@ -1,3 +1,9 @@
+> **STATUS: CURRENT** — annotated 2026-09-26.
+>
+> file set + mount library + go/no-go checklist. Canonical.
+>
+> Do not delete this file. Delete/merge only after the superseding file says so.
+
 # Sell structure — what must exist to sell (2026-09-25)
 
 Everything below is a file, a dimension, or a checklist item. Nothing ships

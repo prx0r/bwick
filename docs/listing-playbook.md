@@ -1,3 +1,9 @@
+> **STATUS: CURRENT** — annotated 2026-09-26.
+>
+> shop signals + title + 10 photos + 15s video + AR film recipe. Memorial removed.
+>
+> Do not delete this file. Delete/merge only after the superseding file says so.
+
 # Listing + shop playbook (2026-09-25)
 
 Conversion system for Etsy. Shop wins clicks before reviews exist; listings

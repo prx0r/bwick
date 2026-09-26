@@ -1,3 +1,9 @@
+> **STATUS: PARTIAL** — annotated 2026-09-26.
+>
+> thesis + moat + product shape still hold. STALE: written pre-'streamlined' naming era (brand now Figg, not PETSY-era labels) and pre-canonical 7-listing launch plan; Q4 plan paragraph needs re-reading against streamlined.md. Memorial correctly removed earlier.
+>
+> Do not delete this file. Delete/merge only after the superseding file says so.
+
 # PETSY — finalized vision (2026-09-25)
 
 Personalized pet universe: upload once, own the character, monetize across

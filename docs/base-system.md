@@ -1,3 +1,9 @@
+> **STATUS: CURRENT** — annotated 2026-09-26.
+>
+> one socket, five mounts; food-safety rule.
+>
+> Do not delete this file. Delete/merge only after the superseding file says so.
+
 # Base system — one socket, five mounts (2026-09-25)
 
 The figurine never changes; it plugs into mounts. One pipeline, one QA bar,

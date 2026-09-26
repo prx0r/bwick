@@ -1,3 +1,9 @@
+> **STATUS: STALE** — annotated 2026-09-25.
+>
+> NAME RETIRED (streamlined.md): BWITCH = an $18M Indian lingerie brand. NEVER in a listing title/shop name. Content (filter-on-core model, breed→arcana map, 5 archetypes) is good scene-pack detail; structure + launch list live in canonical.md.
+>
+> Do not delete this file. Delete/merge only after the superseding file says so.
+
 # BSWITCH — tarot / mystic / witchy collection (2026-09-25)
 
 Third skin of the Bwick system. **Same core, different filter** — that's the

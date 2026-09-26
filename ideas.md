@@ -1,3 +1,9 @@
+> **STATUS: CURRENT** — annotated 2026-09-26.
+>
+> inbox — not stale by design; graduate or kill, never silent-delete.
+>
+> Do not delete this file. Delete/merge only after the superseding file says so.
+
 # ideas.md — product idea bank (2026-09-25)
 
 Anything with a price and a buyer lives here until it graduates to products.md

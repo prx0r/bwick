@@ -1,3 +1,9 @@
+> **STATUS: CURRENT** — annotated 2026-09-26.
+>
+> build state current; overlaps list updated after canonical merge.
+>
+> Do not delete this file. Delete/merge only after the superseding file says so.
+
 # BUILD NOTES (2026-09-25)
 
 ## What's built (runs today)

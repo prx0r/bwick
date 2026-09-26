@@ -1,3 +1,9 @@
+> **STATUS: PARTIAL** — annotated 2026-09-26.
+>
+> SKU list + spell menu + measure-and-react protocol CURRENT. STALE: 'exactly 30% everywhere' paragraph predates the later 'start at 30, see demand, price-match proven' calls — pricing authority lives in docs/pricing-analysis.md.
+>
+> Do not delete this file. Delete/merge only after the superseding file says so.
+
 # Christmas line — LOCKED (2026-09-25)
 
 Rules: EXACTLY 30% margin on everything (price to it, not above — volume over
@@ -46,6 +52,13 @@ review rate (reviews/orders), return rate, question volume. Decisions:
 - High views + low conversion → fix photos/video first (traffic is fine, offer isn't).
 - High returns/questions on one SKU → pause, fix, relist (protect Star Seller).
 No opinions survive contact with the numbers. The line on Jan 1 is whatever sold.
+
+## Delivery (see delivery-experience.md)
+
+Card ships first (Prodigi 2–3d) = Act One teaser; figure follows (Makr3D) =
+Act Two main event. Both arrival dates published in listing + confirmation.
+Figure carries its QR embossed in the base — no packaging insert to forget.
+Order cut-offs published 3×; buyers needing a single arrival get both re-sequenced.
 
 ## Dropped for Christmas
 

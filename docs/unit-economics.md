@@ -1,3 +1,9 @@
+> **STATUS: STALE** — annotated 2026-09-26.
+>
+> Every RETAIL/NET figure here is superseded: decisions moved to (a) exactly 30% with ship absorbed [christmas-line], then (b) 'price match lowest proven' [pricing-analysis]. VERIFIED COSTS (Prodigi/Makr3D/Meshy quotes) remain valid — reuse costs, ignore retails.
+>
+> Do not delete this file. Delete/merge only after the superseding file says so.
+
 # Unit economics — top products, full stack (2026-09-25)
 
 Currency: £ unless marked $. Meshy on $16 plan ($0.0053/cr ≈ £0.0042/cr).

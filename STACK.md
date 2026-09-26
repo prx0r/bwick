@@ -1,3 +1,9 @@
+> **STATUS: PARTIAL** — annotated 2026-09-26.
+>
+> SKU list + fulfilment map + rules still LOCKED and valid. STALE: header says 'PETSY' (retired-era name) — brand is now Figg; prices in this table predate the christmas-line 30%-Model-A decision and the 'price match proven sellers' call — see docs/pricing-analysis.md for money, this file for structure.
+>
+> Do not delete this file. Delete/merge only after the superseding file says so.
+
 # PETSY — final stack, SKUs, margins (LOCKED 2026-09-25)
 
 Positioning: cheap + fun, ~£10 anchor. Memorial dropped. Zero inventory,

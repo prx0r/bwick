@@ -1,3 +1,9 @@
+> **STATUS: PARTIAL** — annotated 2026-09-26.
+>
+> verified cost anchors still valid (canvas £28.62, FAP £11.40, Makr3D £1.29-7.60, Meshy cr). STALE: 'pricing verdict' columns and S/A/B recommendations predate the 30%-Model-A + price-match-proven decisions.
+>
+> Do not delete this file. Delete/merge only after the superseding file says so.
+
 # Full pricing reference — Prodigi + Makr3D + Meshy (2026-09-25)
 
 Source key: LIVE = quoted live via API this session (GBP, Standard, GB).

@@ -1,3 +1,9 @@
+> **STATUS: STALE** — annotated 2026-09-25.
+>
+> NAME RETIRED (streamlined.md): 'Bwickmas' is a doppelgänger of an existing creator brand's collection — never public. Also: currency/structure defers to canonical.md. Content (shelf/mantel/show-off bundles, Q4 rules) still useful as scene-pack detail.
+>
+> Do not delete this file. Delete/merge only after the superseding file says so.
+
 # BWICKMAS — Christmas brand/season (2026-09-25)
 
 Bwizards in Santa hats. Same avatars, Christmas skins, seasonal SKUs, Oct–Dec

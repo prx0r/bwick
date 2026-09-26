@@ -1,3 +1,9 @@
+> **STATUS: CURRENT** — annotated 2026-09-26.
+>
+> personas + keywords + quotes rule; memorial persona correctly removed.
+>
+> Do not delete this file. Delete/merge only after the superseding file says so.
+
 # Targeting — buyer personas, keywords, angles (2026-09-25)
 
 Checkout temperaments differ by persona: Sam + kids need speed/simplicity;

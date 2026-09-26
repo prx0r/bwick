@@ -1,3 +1,9 @@
+> **STATUS: CURRENT** — annotated 2026-09-26.
+>
+> Printful/Printify/Gooten + 3D Vikings; EU-base caveat recorded.
+>
+> Do not delete this file. Delete/merge only after the superseding file says so.
+
 # US suppliers — equivalents + complements (2026-09-25)
 
 Why US fulfilment: most Etsy buyers are US-based. UK→US shipping costs margin

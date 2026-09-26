@@ -1,3 +1,9 @@
+> **STATUS: CURRENT** — annotated 2026-09-26.
+>
+> DRAFT by design — all TBDs correctly keyed to Meshy key. Not stale, blocked.
+>
+> Do not delete this file. Delete/merge only after the superseding file says so.
+
 # LISTING-001 — Personalized Pet Brick Ornament (DRAFT, pre-mesh)
 
 Status: copy + structure DONE. Photos/video/price need real mesh + print sample.

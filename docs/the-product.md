@@ -1,3 +1,9 @@
+> **STATUS: PARTIAL** — annotated 2026-09-25.
+>
+> Core doctrine + 5-mount base system + food-safety rule CURRENT. STALE: unit-math table (~£18 net) predates the 30%-Model-A and price-match-proven pricing decisions — costs valid, net columns superseded (see docs/pricing-analysis.md). NFC-tag placement note still good.
+>
+> Do not delete this file. Delete/merge only after the superseding file says so.
+
 # THE product — one figurine, NFC alive, cheap print attach (2026-09-25)
 
 Doctrine: ONE product (small plastic figurine of your photo). Topper, ornament,

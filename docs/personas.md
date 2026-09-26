@@ -1,3 +1,9 @@
+> **STATUS: CURRENT** — annotated 2026-09-26.
+>
+> style picker mapping; fidelity rule enforced in texture prompts.
+>
+> Do not delete this file. Delete/merge only after the superseding file says so.
+
 # Personas — style picker mapping table (2026-09-25)
 
 The 5th question on every listing. Default "Match my photo" + 4 personas +

@@ -1,3 +1,9 @@
+> **STATUS: CURRENT** — annotated 2026-09-26.
+>
+> special doc / front door. Three collections, one display format.
+>
+> Do not delete this file. Delete/merge only after the superseding file says so.
+
 # thisisit.md — three collections, one display format (2026-09-25)
 
 Three collections, all using the **same personalised brick-figure display

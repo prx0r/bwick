@@ -1,3 +1,9 @@
+> **STATUS: CURRENT** — annotated 2026-09-26.
+>
+> green/yellow/red + mesh-sourcing hybrid. Gate for every new theme.
+>
+> Do not delete this file. Delete/merge only after the superseding file says so.
+
 # Trademark triage (2026-09-25)
 
 Rule: sell the genre, never the character. "Dark academy uniform figure" ranks;

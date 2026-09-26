@@ -1,3 +1,9 @@
+> **STATUS: CURRENT** — annotated 2026-09-26.
+>
+> pog.action/v1 schema + 10 actions + seasonal packs.
+>
+> Do not delete this file. Delete/merge only after the superseding file says so.
+
 # ACTION_LIBRARY.md — pog.action/v1 + 10 starter actions
 
 Actions are style-agnostic intents. Same definition drives rigid brick bodies,

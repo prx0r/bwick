@@ -1,3 +1,9 @@
+> **STATUS: CURRENT** — annotated 2026-09-26.
+>
+> 5 products — aligns with canonical §4.
+>
+> Do not delete this file. Delete/merge only after the superseding file says so.
+
 # Simple products — who it's for (2026-09-25)
 
 Five products. Every theme, season, and SKU plugs into one of them. If a new

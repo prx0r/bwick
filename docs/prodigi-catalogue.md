@@ -1,3 +1,9 @@
+> **STATUS: CURRENT** — annotated 2026-09-26.
+>
+> categories + v4 API essentials + week-one infra.
+>
+> Do not delete this file. Delete/merge only after the superseding file says so.
+
 # Prodigi catalogue — what we use (imported 2026-09-25)
 
 Source: prodigi.com/products + Print API v4 docs. 500K+ SKUs, UK/EU/US labs.

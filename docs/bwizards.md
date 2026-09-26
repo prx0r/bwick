@@ -1,3 +1,9 @@
+> **STATUS: STALE** — annotated 2026-09-25.
+>
+> NAME RETIRED (streamlined.md): BWIZARD/BWICK/BWICKMAS are internal labels only — public naming is Figg + Roast/Mystic/Holiday. Content = scene-pack detail (breed→archetype maps, buyers matrix); defer to canonical.md for structure, listings and pricing.
+>
+> Do not delete this file. Delete/merge only after the superseding file says so.
+
 # BWIZARDS — collection doc (2026-09-25)
 
 One universe (wizard academy, IP-safe), fully dressed, infinitely extendable.

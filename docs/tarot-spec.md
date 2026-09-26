@@ -1,3 +1,5 @@
+> **STATUS: SUPERSEDED** — replaced by /canonical.md (frame + archetype picker merged in); collection detail in docs/bwitch.md.
+>
 > **SUPERSEDED by `/canonical.md`.** Kept as history — do not edit, do not follow.
 > The canonical glossary/schema/launch list lives in `canonical.md`.
 

@@ -1,3 +1,9 @@
+> **STATUS: CURRENT** — annotated 2026-09-26.
+>
+> THE product system. Anchor doc. Supersedes structure-spec + tarot-spec.
+>
+> Do not delete this file. Delete/merge only after the superseding file says so.
+
 # CANONICAL — the product system (2026-09-25)
 
 **This file supersedes `structure-spec.md`, `tarot-spec.md` and any earlier

@@ -1,3 +1,9 @@
+> **STATUS: CURRENT** — annotated 2026-09-26.
+>
+> fidelity-first rule; persona fragments.
+>
+> Do not delete this file. Delete/merge only after the superseding file says so.
+
 # Texture prompting — reference guide (2026-09-25)
 
 Sources: Meshy prompting docs (4-part formula, 800-char limit, 3–6 details),

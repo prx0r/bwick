@@ -1,3 +1,9 @@
+> **STATUS: CURRENT** — annotated 2026-09-26.
+>
+> S/A/B/C with sales evidence; memorial removed.
+>
+> Do not delete this file. Delete/merge only after the superseding file says so.
+
 # Tiers validated through Etsy demand (2026-09-25)
 
 Every tier below carries observed Etsy sales figures (EtsyHunt/eHunt Sep 2026,

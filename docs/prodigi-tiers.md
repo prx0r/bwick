@@ -1,3 +1,9 @@
+> **STATUS: CURRENT** — annotated 2026-09-26.
+>
+> S/A/B/C ranked with sales evidence.
+>
+> Do not delete this file. Delete/merge only after the superseding file says so.
+
 # Prodigi catalogue tiers — whole catalogue ranked for roast.pet (2026-09-25)
 
 500K+ SKUs across 13 categories. Ranked by margin × demand-fit × pipeline-readiness

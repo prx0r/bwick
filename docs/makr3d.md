@@ -1,3 +1,9 @@
+> **STATUS: CURRENT** — annotated 2026-09-26.
+>
+> published GBP examples — flagged as NOT live-quoted (needs our STL).
+>
+> Do not delete this file. Delete/merge only after the superseding file says so.
+
 # Makr3D — UK 3D print fulfilment (imported 2026-09-25)
 
 Run by Yorkshire3D Ltd, Huddersfield (trading 2019, 150K+ orders, 4.9/5,

@@ -1,3 +1,9 @@
+> **STATUS: PARTIAL** — annotated 2026-09-26.
+>
+> prompt fragments + palettes still valid. STALE: pack names (Academic/Pirate/Slayer/Christmas Workshop) predate Roast/Mystic/Holiday line rename — treat as internal labels.
+>
+> Do not delete this file. Delete/merge only after the superseding file says so.
+
 # Theme packs — prompt fragments, first three (2026-09-25)
 
 Each pack = palette + props + pose + texture_prompt fragment + fidelity anchor.

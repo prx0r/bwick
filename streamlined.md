@@ -1,3 +1,9 @@
+> **STATUS: CURRENT** — annotated 2026-09-26.
+>
+> AUTHORITATIVE on brand naming: BWICK/BWITCH/BWICKMAS retired, Figg + Roast/Mystic/Holiday.
+>
+> Do not delete this file. Delete/merge only after the superseding file says so.
+
 # streamlined.md — brand retirement + remapped lines (2026-09-25)
 
 ## Collision alert (this is why we check)

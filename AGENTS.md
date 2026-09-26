@@ -1,3 +1,9 @@
+> **STATUS: CURRENT** — annotated 2026-09-26.
+>
+> brand/naming rules + key-file map current as of this pass.
+>
+> Do not delete this file. Delete/merge only after the superseding file says so.
+
 # AGENTS.md — repo operations
 
 > Personalized pet universe. Brand: **Figg** (bwick / bwitch / bwickmas are

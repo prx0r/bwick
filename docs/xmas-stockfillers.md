@@ -1,3 +1,9 @@
+> **STATUS: CURRENT** — annotated 2026-09-26.
+>
+> Etsy demand data validated (socks 68k, mugs 73.9k). Review-engine mechanics current.
+>
+> Do not delete this file. Delete/merge only after the superseding file says so.
+
 # Xmas stocking fillers + review engine (validated 2026-09-25)
 
 Thesis: cheap cheerful SKUs aren't the profit center — they're the review engine.

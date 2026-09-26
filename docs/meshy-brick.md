@@ -1,3 +1,9 @@
+> **STATUS: CURRENT** — annotated 2026-09-26.
+>
+> verified from API docs; credits + endpoints correct.
+>
+> Do not delete this file. Delete/merge only after the superseding file says so.
+
 # Meshy Brick Figure — complete reference (verified from API docs + product page)
 
 ## Pipeline (two API stages, must both be API — webapp prototypes do NOT chain)

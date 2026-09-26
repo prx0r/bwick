@@ -1,3 +1,9 @@
+> **STATUS: STALE** — annotated 2026-09-26.
+>
+> 'Bwizards template' + add-a-member model is superseded by canonical.md scene-pack/config-schema system. Ideas (set props, couple flagship, grows-with-customer) still good — re-read against canonical §3/§5.
+>
+> Do not delete this file. Delete/merge only after the superseding file says so.
+
 # Collections, not catalogues (2026-09-25)
 
 One universe, done obscenely well, beats twelve themes done thinly. Buyers join

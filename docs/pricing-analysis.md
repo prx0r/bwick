@@ -1,3 +1,9 @@
+> **STATUS: PARTIAL** — annotated 2026-09-26.
+>
+> LIVE-QUOTED cost table + Model A decision (ship absorbed, 30% net, start there + measure) are CURRENT. STALE: collection labels 'Bwizards/Bwickmas' — now Mystic/Holiday (streamlined.md). Heavy-SKU retails here superseded by 'price match proven'.
+>
+> Do not delete this file. Delete/merge only after the superseding file says so.
+
 # Pricing analysis — Bwizards + Bwickmas (live-quoted 2026-09-25)
 
 Every number below is a **live quote** from the Prodigi v4 API (key verified,

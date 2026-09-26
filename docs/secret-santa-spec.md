@@ -1,3 +1,9 @@
+> **STATUS: CURRENT** — annotated 2026-09-26.
+>
+> 7 SKUs, friction killers, comedy-safety rules, sequencing. Current.
+>
+> Do not delete this file. Delete/merge only after the superseding file says so.
+
 # Secret-santa shelf — full spec (2026-09-25)
 
 Positioning: cheap (£8–15), fast, funny. 30% margin floor (comfortable — figures

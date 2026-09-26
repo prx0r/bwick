@@ -1,3 +1,9 @@
+> **STATUS: PARTIAL** — annotated 2026-09-26.
+>
+> 'Cast, don't copy' is still core positioning. STALE: incidental bwick-era framing; line names are now Roast/Mystic/Holiday (see streamlined.md). Taglines may need refresh for Figg naming.
+>
+> Do not delete this file. Delete/merge only after the superseding file says so.
+
 # Moat — cast, don't copy (2026-09-25)
 
 **Everyone else copies your photo. We cast you in a world.**

@@ -1,3 +1,9 @@
+> **STATUS: CURRENT** — annotated 2026-09-26.
+>
+> AR ideas + Prodigi map + trading-card suppliers; includes live pet-tag quotes.
+>
+> Do not delete this file. Delete/merge only after the superseding file says so.
+
 # Wizard extensions — AR ideas, Prodigi catalogue, trading cards (2026-09-25)
 
 ## 1. AR ideas beyond the four spells

@@ -1,3 +1,9 @@
+> **STATUS: CURRENT** — annotated 2026-09-26.
+>
+> fandom demand evidence (2026).
+>
+> Do not delete this file. Delete/merge only after the superseding file says so.
+
 # Sticky universes — ranked fandom targets (2026-09-25)
 
 All figures US/Global 2026 unless noted. Rule throughout: aesthetic + vibe, never

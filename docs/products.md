@@ -1,3 +1,9 @@
+> **STATUS: STALE** — annotated 2026-09-26.
+>
+> v3 predates canonical §6 (7 launch listings) and streamlined line names. Memorial correctly dropped. Retail columns superseded by christmas-line + pricing-analysis decisions — treat money sections as historical, product shapes as still useful.
+>
+> Do not delete this file. Delete/merge only after the superseding file says so.
+
 # PRODUCTS.md — cheap + fun, ~£10 anchor (v3)
 
 Positioning: cheap and cheerful, not premium. Most things around £10.

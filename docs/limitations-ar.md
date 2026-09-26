@@ -1,3 +1,9 @@
+> **STATUS: CURRENT** — annotated 2026-09-26.
+>
+> constraint inventory + QR/NFC binding design.
+>
+> Do not delete this file. Delete/merge only after the superseding file says so.
+
 # Limitations + AR-on-everything (structural spec, 2026-09-25)
 
 ## 1. Limitation inventory (everything that can stop us, by layer)
@@ -67,8 +73,8 @@ carries a **QR binding** → scans to that order's AR moment and/or video.
 |---|---|---|
 | Card | printed on back/inside (part of design) | avatar performs the joke |
 | Sticker sheet | corner QR on sheet backing | avatar wave + shop link (viral loop) |
-| Figure/statue | hang tag + base engraving (short URL) + packaging insert | 360° spin + signature action (bow/wave) |
-| Ornament | hang tag + gift-box insert | wiggle + jingle sting |
+| Figure/statue | **QR embossed in the base/plinth (default — see delivery-experience.md §1)**; fallback = hang tag | 360° spin + signature action (bow/wave) |
+| Ornament | QR embossed in the base/plate; ribbon hang tag as fallback | wiggle + jingle sting |
 | Jigsaw | box lid QR | completed-puzzle reveal video |
 | Calendar | 12 QRs, one per month page | 12 monthly moments (seasonal pack engine) |
 | Mug/cushion/phone | packaging insert (print can't carry QR well on curved/cushion) | avatar greeting |

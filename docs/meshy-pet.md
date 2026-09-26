@@ -1,3 +1,9 @@
+> **STATUS: CURRENT** — annotated 2026-09-26.
+>
+> verified pet-relevant subset; quadruped nuance correct.
+>
+> Do not delete this file. Delete/merge only after the superseding file says so.
+
 # Meshy docs — pet-relevant subset (imported 2026-09-25)
 
 Full API: docs.meshy.ai. Auth: `Authorization: Bearer KEY`. All calls async

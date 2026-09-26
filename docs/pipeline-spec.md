@@ -1,3 +1,9 @@
+> **STATUS: CURRENT** — annotated 2026-09-26.
+>
+> engine stages -> Etsy packaging -> fulfilment per product.
+>
+> Do not delete this file. Delete/merge only after the superseding file says so.
+
 # Pipeline spec — top products via etsysignal engine + Etsy limits (2026-09-25)
 
 Engine: etsysignal `roastpet/` (intake → comedy → generate → cards → listing →
