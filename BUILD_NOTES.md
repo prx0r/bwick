@@ -17,13 +17,19 @@
 
 ## What's specced, not built (in priority order)
 
-1. Meshy key → real pet mesh (multi-image, 30cr) → rig/AR/print fan-out.
-2. Card-studio Perform button → talk.py wiring in gallery.
-3. QR/NFC per-order binding + model-viewer AR page (template exists in brick.py).
-4. Prodigi SKUs (6 needed from dashboard) → live prices for full S tier.
-5. Makr3D account + first test print (STL → quote → sample → photos).
-6. Etsy listings (listing-001 ornament drafted; needs mesh renders + print photos).
-7. Mount library CAD (socket dims, spike/loop/plinth/magnet/ring — spec'd, not modeled).
+1. **Concept library assets**: `boards/` + `tiles/` + `catalog.json` from
+   `concepts.md` (36 IDs) + `PRP-*` props (`productlist1.md` build order 1–3).
+2. **`compose()`** — reads `catalog.json`, emits design prompt + shot list,
+   enforces immutable identity + 2-mesh ceiling (`concepts.md` rules).
+3. Meshy key → real pet mesh (multi-image, 30cr) → rig/AR/print fan-out.
+4. **QR embossed in the figure base** (Bambu in-slicer text tool; `delivery-experience.md` §1)
+   — replaces packaging inserts for figure SKUs. Test-scan at 30cm before approving.
+5. Card-studio Perform button → talk.py wiring in gallery.
+6. Model-viewer AR page + per-order binding (`brick.py` template exists, URLs pending).
+7. Prodigi SKUs (6 needed from dashboard) → live prices for full S tier.
+8. Makr3D account + first test print (STL → quote → sample → photos).
+9. Etsy listings (listing-001 ornament drafted; needs mesh renders + print photos).
+10. Mount library CAD (socket dims, spike/loop/plinth/magnet/ring — spec'd, not modeled).
 
 ## Blockers (need human)
 

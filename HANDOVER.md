@@ -1,6 +1,6 @@
 # HANDOVER — start here
 
-> **STATUS: CURRENT** — 2026-09-25. Written at end of a long spec/build session,
+> **STATUS: CURRENT** — 2026-09-26. Written at end of a long spec/build session,
 > before any listing shipped. Read this, then the files below in order.
 
 ## What this is
@@ -17,22 +17,25 @@ Etsy sells, everything else is digital.
 
 1. **`thisisit.md`** — the special one-pager. Three collections, one display format.
 2. **`canonical.md`** — THE product system: glossary, config schema, 7 launch listings. **Everything else defers to its vocabulary.**
-3. `VISION.md` + `STACK.md` — thesis, locked SKUs, suppliers, margins.
-4. `streamlined.md` — brand naming (authoritative: BWICK/BWITCH/BWICKMAS are dead as names).
-5. `BUILD_NOTES.md` — what's built vs specced vs blocked.
-6. `docs/` — specs. Every file carries a **STATUS** header (CURRENT / PARTIAL / STALE / SUPERSEDED); read the header before trusting a number.
+3. **`concepts.md`** — our 36-concept library (3 worlds × 4 categories × 3). Composition rules live here.
+4. `VISION.md` + `STACK.md` — thesis, locked SKUs, suppliers, margins.
+5. `streamlined.md` — brand naming (authoritative: BWICK/BWITCH/BWICKMAS are dead as names).
+6. `BUILD_NOTES.md` — what's built vs specced vs blocked.
+7. `docs/` — specs. Every file carries a **STATUS** header (CURRENT / PARTIAL / STALE / SUPERSEDED); read the header before trusting a number.
+8. `productlist1.md` — upstream concept-art retrieval rules (assets NOT in repo).
 
-## Doc status summary (48 files, all annotated in-place)
+## Doc status summary (52 files, all annotated in-place)
 
-- **CURRENT (39)** — trust as written. Supplier facts verified live (Meshy API
+- **CURRENT (33)** — trust as written. Supplier facts verified live (Meshy API
   docs, Prodigi v4 quotes, Makr3D published GBP); Etsy demand figures cited.
-- **PARTIAL (6)** — structure still good, numbers/labels superseded:
+- **PARTIAL (11)** — structure still good, numbers/labels superseded:
   `VISION.md`, `STACK.md` (PETSY-era name + pre-decision prices),
-  `docs/catalogue.md`, `docs/pricing.md`, `docs/pricing-analysis.md` (collection
-  labels), `docs/christmas-line.md` (pricing authority now lives in
-  pricing-analysis), `docs/theme-packs.md` (pack labels), `docs/the-product.md`
-  (net columns), `docs/moat.md`.
-- **STALE (5)** — do not follow without canonical:
+  `docs/catalogue.md`, `docs/pricing.md`, `docs/pricing-analysis.md`,
+  `docs/christmas-line.md` (pricing authority lives in pricing-analysis),
+  `docs/theme-packs.md`, `docs/the-product.md`, `docs/moat.md`,
+  `streamlined.md` (naming authoritative; product list pre-4-lock),
+  `productlist1.md` (assets missing + family entries).
+- **STALE (6)** — do not follow without canonical:
   `docs/products.md` (pre-7-listing + pre-rename),
   `docs/unit-economics.md` (**every retail figure superseded** — reuse its
   verified COSTS only),
@@ -44,7 +47,13 @@ Etsy sells, everything else is digital.
 
 ## What is built and green
 
-`engine/` runs: gallery (20 card PNGs), avatar store (upload → situations),
+**Docs (52 files):** full annotation pass complete — every file carries a
+STATUS header; `canonical.md` merged the three system docs; `concepts.md` holds
+the 36-concept library; `delivery-experience.md` (QR-embossed-in-base + Act
+One/Act Two split shipping); the 4-product lock is applied consistently across
+all current files (verified by grep).
+
+**Code (`engine/`):** gallery (20 card PNGs), avatar store (upload → situations),
 photo-card compositing, `talk.py` MP4 (2.5D + voice), `etsy_order.py --demo`
 GREEN (fake Etsy orders through the real pipeline), `brick.py --demo` GREEN
 (Meshy + Makr3D calls stubbed with exact shapes), live Prodigi quoting via MCP.
@@ -53,10 +62,12 @@ Systemd timer: daily collection. R2 backup validated (8.4K objects / 18GB).
 ## What blocks shipping (in order)
 
 1. **MESHY_API_KEY** — nothing 3D exists without it. Free 100 credits, no card.
-2. Makr3D account + first test print (STL → quote → sample → photos).
-3. Etsy shop + Prodigi/Makr3D dashboard connections (disclose production partners).
-4. Disk near-full on this box (see aocsec/box-audit.md DROP list).
-5. Decision: which line owns the Christmas SKUs overlapping Roast (see
+2. **Concept library assets** — `boards/`, `tiles/`, `catalog.json` do not exist
+   yet (`productlist1.md` build order, step 1–3). Blocks `compose()`.
+3. Makr3D account + first test print (STL → quote → sample → photos).
+4. Etsy shop + Prodigi/Makr3D dashboard connections (disclose production partners).
+5. Disk near-full on this box (see aocsec/box-audit.md DROP list).
+6. Decision: which line owns the Christmas SKUs overlapping Roast (see
    streamlined.md open question).
 
 ## Open decisions not made here
@@ -66,9 +77,19 @@ Systemd timer: daily collection. R2 backup validated (8.4K objects / 18GB).
 - 30%-net vs price-match-proven — both documented, `pricing-analysis.md` holds
   the live quotes; pick one and update `STACK.md` so there's a single authority.
 
+## Done since this file was first written (do not re-do)
+
+- Family sets cut → 4 products, max-two-meshes lock applied repo-wide.
+- Brand retirement (Figg + Roast/Mystic/Holiday) recorded, `streamlined.md`
+  demoted to PARTIAL (naming authoritative, product list stale).
+- All 48 original docs annotated in place; zero deletions.
+- Two delivery decisions: QR embossed in the figure base (deletes the insert
+  problem); Act One/Act Two split shipping (serialized reveal).
+
 ## Rules that must not be eroded
 
 Preview-before-print on every custom SKU · mild roast default for office SKUs ·
 IP gate before any listing (`trademark.md` + `ip_check: pass` in config) ·
 no franchise wording · 30%+ economics or documented exception · one owner per SKU ·
-memorial parked, not this Q4 · evidence-graded prices (✓/Q/EST) · no secrets in git.
+**max two meshes per order, no family sets** · memorial parked, not this Q4 ·
+evidence-graded prices (✓/Q/EST) · no secrets in git.
