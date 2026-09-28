@@ -48,3 +48,34 @@ does it" means nothing against automated scanners). Our comedy is original
 per-order — unreportable and uncopyable. Paraphrases don't save you if the
 reference is obvious. Public domain (pre-1929: Dickens, Shakespeare, old
 carols) is free — check USPTO for specific-use trademarks anyway.
+
+---
+
+## The plain product + competitive scan (added 2026-09-27)
+
+**Positioning line:** *"Upload your pics. Get your brick self. $9.99."*
+
+### Scan evidence (Etsy + adjacent, Sep 2026)
+
+| lane | price | signal |
+|---|---|---|
+| Handmade photo→brick figures (couples/frames) | €40–74 | demand proven (182/911/93 sales) but slow + premium |
+| Photo-mosaic brick blocks | €5–19 | volume (5k + 2.1k sales) — different product (photo AS bricks) |
+| Digital AI minifigs (BrickifyMe etc.) | $1–29 |10k+ users, no physical |
+| **Plain photo→brick figure, $9.99** | — | **absent. Our gap.** |
+
+### Who buys
+Gift buyers (44% of Etsy buyer reason), Secret-Santa Sam (£8–15 — $9.99 is his
+number), couples/wedding (strongest occasion lane; pair shops at €41–74),
+self-gifters ("treat yourself" trend), AFOL desk-toy crowd. Occasion calendar
+(lead time4–8 weeks): Valentine's Dec–Jan · Mother's Mar–Apr · Father's Apr–May ·
+Graduation Mar–May · Halloween Jul–Sep · **Christmas Sep–Nov**.
+
+### Words we never use
+"LEGO" and "minifigure" are live LEGO marks. Market language: **brick figure ·
+block figure · building-block figure**. Same rule as `trademark.md`, now for
+our own category too.
+
+### The offer stack (one breath)
+photo → brick self → mount (desk/tree/cake/magnet) → handheld (your thing) →
+clean photo proof + video → $9.99 · couple premium · seasonal skins.

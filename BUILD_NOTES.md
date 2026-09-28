@@ -8,6 +8,10 @@
 
 ## What's built (runs today)
 
+- **`engine/normalise.py` (P0.1) + `engine/tests/test_normalise.py` —9/9 green
+  offline**: EXIF orient, magic-byte/size/dim QC, front-first role sort,
+  favourite exclusion, ≤4 images, ≤2048 edge, base64 `image_urls[]`.
+
 - gallery (20 card PNGs served), avatar store (upload → persistent
   avatar → situations), photo-card compositing, Etsy order simulator
   (`etsy_order.py --demo` GREEN), brick pipeline stubs (`brick.py --demo` GREEN),

@@ -78,3 +78,33 @@ specific guitar," "the family's actual caravan," "the trophy they won"). Flow:
 - `concepts.md`: the 36 stay as-is; add a `couple_pet` variant note per world's
   couple row (not a new product line).
 - Pricing: figure price + prop surcharge (never bake custom props into base price).
+
+---
+
+## Handhelds — the killer wedge (added 2026-09-27)
+
+Brick hands grip. The buyer picks what their figure carries — that's a second
+layer of personalization on top of the face, at zero marginal cost (library
+props, variant data, no identity mesh, no photo).
+
+**Checkout field:** *"What's your figure holding?"* — preset picker + optional
+custom note (custom note = `ip_check` gate applies: style/mood yes, franchises no).
+
+### The library (launch set → grows by demand)
+
+| Handheld | Occasion it unlocks |
+|---|---|
+| diploma scroll | graduation (list Apr–May) |
+| bouquet · ring pair | wedding, Valentine's (Etsy's #1 occasion) |
+| stethoscope · whisk · wrench | nurse / cook / tradie profession gifts |
+| guitar · controller · camera · skateboard | hobby identities |
+| takeaway cup · coffee | desk self-gift, "treat yourself" |
+| teddy · baby bottle | new parent, kid gifts |
+| present + mug | **Xmas — the ornament holding a present** |
+| wand · broom · spellbook | Wizard/Witch packs (held, not beside) |
+| fish · football · book | hobby/reader variants |
+
+Rules (same as every prop): worn/beside/held allowed for brick figures;
+**animals stay beside only**; max 3 elements per character; no new modelling
+per order — every handheld is a `PRP-*` in the concept library with geometry
+verified before it lists.

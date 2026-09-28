@@ -51,6 +51,7 @@ and a single buyer photo session. It was never about counting triangles.
 | **Prop pack** | 2–3 meshes from the shared library (no new modelling per order). |
 | **Backdrop** | Interchangeable printed panel — **not** a separately generated 3D model. |
 | **Base / mount** | The 2 physical bases (single, couple) + mounts (spike, loop, plinth, magnet, ring). |
+| **Handheld** | Prop the figure carries in its brick hand: library item, no identity, picked at checkout ("What's your figure holding?"). |
 | **Frame** | Tarot card layout: image area + title banner + roman numeral + keyword line. One layout → card, backplate, sticker, poster. |
 | **Archetype** | Tarot picker option. Curated set only (see §5), never all 22. |
 | **Action** | `pog.action/v1` intent (kiss, reveal, glow, dance…). Style-agnostic. |
@@ -87,26 +88,44 @@ and a single buyer photo session. It was never about counting triangles.
 - Order flow: `funnylabs/etsy_order.py` becomes a config interpreter, not a
   per-product script.
 
-## 4. Four products (the whole catalogue)
+## 4. Two cores + contexts (amended 2026-09-27 — the simplification)
 
-1. **Pet** — the engine and volume king. Dogs and cats, one line, same SKUs
-   (figures, ornaments, cards, stickers). Validated by testing, not theory.
-2. **Couple** — pair + shared scene + AR moment. Premium romance lane.
-3. **Solo + pet familiar** — the signature combo. Highest emotion per order,
-   and it's the only product your competitors structurally can't copy well.
-4. **Solo** — single human, any scene pack. Entry point: birthdays, self-gifts.
+**The plain product, stated like a listing:** *"Upload your pics. Get your
+brick self. $9.99."* Nobody on Etsy sells it plain and cheap (scan: handmade
+photo-brick figures €40–74 · photo-mosaics €5–19 · digital toys $1–29 ·
+**plain SKU = open gap**).
 
-**Family is cut** (not "later" — *out*). Max three identity meshes per order is
-the hard rule; **couple may add a pet as a variant** (+£, third mesh — `PROPS.md`).
-Baby and everything identity-free rides as props, unlimited and free.
+1. **Solo** — you as a brick figure, any scene pack, any handheld. The core.
+   $9.99 impulse anchor (matches Secret-Santa Sam's £8–15 cap exactly).
+2. **Couple** — pair + shared scene. The premium wedge (validated: pair shops
+   at €41–74; wedding = Etsy's strongest occasion lane).
 
-Everything else (keychains, stickers, cards, ornaments, toppers, tattoos) is a
-**context** on one of these four — never a fifth product.
+**Mounts turn one figure into five listings** (context, never a new product):
+`plinth` = desk figure · `loop` = tree ornament · `spike` = cake topper ·
+`magnet` · `ring`. Each mount is listed in its own Etsy category for discovery.
+
+**Handhelds are the killer wedge.** Brick hands are made to hold: the buyer
+picks what their figure carries (diploma, bouquet, stethoscope, guitar,
+controller, takeaway, present, wand…). Handhelds are library props — no
+identity mesh, no photo, variant-data at checkout: *"What's your figure
+holding?"* See `PROPS.md` for the library.
+
+**Pets: V2 experiment track** (not cut, not shipping in V1). No identity-pet
+SKUs until a standard brick pet exists (or BrickLink parts adopted). V1
+familiar = library prop (cat/owl beside, never a likeness). Pet Arcana and
+Naughty List Pet Ornament → phase 2, gated.
+
+**Photo backing: out** (two-parcel complexity; flat prints are a separate
+digital/Prodigi SKU only if demand asks). **AR: parked.** **Family: still cut**
+— ≤3 identity meshes holds; everything identity-free is a prop, unlimited.
+
+Keychains, stickers, cards, ornaments, toppers, tattoos remain **contexts**
+on the two cores — never a fifth product.
 
 ## 5. Collections = scene packs
 
 ### The frame, mechanic, and picker (shared rules)
-- 3D props must be **worn or beside, never held** (pets don't grip).
+- 3D props are **worn, beside, or HELD** — brick hands grip by design (2026-09-27: the handheld wedge). Exception stands for animals: pets and animal companions are **beside only** (they don't grip).
 - Max 3 elements per character (clutter kills it).
 - Archetype/costume choice via **picker**, never "describe your fantasy" —
   buyers choose from tight templates.
@@ -151,7 +170,7 @@ Pitch: *"Turn yourself into an original magical character."* **No franchise word
 |---|---|---|
 | 1 | tarot | The Lovers |
 | 2 | tarot | The Magician |
-| 3 | tarot | Pet Arcana |
+| 3 | tarot | Plain Solo: desk figure + handheld  *(Pet Arcana → phase 2, pets V2)* |
 | 4 | wizard | Wizard Couple |
 | 5 | wizard | You + Your Familiar |
 | 6 | xmas | Our First Christmas |
@@ -162,7 +181,7 @@ display, full-deck energy, Christmas memorial (**locked: not this Q4** —
 parked, not "maybe later," or it creeps back in October).
 
 Blunt ranking: Lovers > You+Familiar > Our First Christmas > Naughty List >
-Wizard Couple > The Magician. (Pet Arcana kept for positioning reasons — see §7.)
+Wizard Couple > The Magician. (Pet Arcana → phase 2 with the pet track; positioning rules in §7 still bind it.)
 
 ## 7. Shared order inputs + hard rules
 

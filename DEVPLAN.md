@@ -1,152 +1,106 @@
-> **STATUS: CURRENT** — 2026-09-26. Full development plan: phases, tests,
-> validation gates, promo/AR/ Etsy showcase. Read with `MESH_PIPELINE.md`
-> (stage detail) and `BUILD_NOTES.md` (the 21-item backlog).
+# DEVPLAN — build, test, validate, promote (rewritten 2026-09-27)
 
-# DEVPLAN.md — build, test, validate, promote
+> **STATUS: CURRENT** — post-simplification plan. Read `HANDOVER.md` first,
+> `MESH_PIPELINE.md` for mesh-stage detail, `docs/creative-system.md` and
+> `docs/fulfilment.md` for today's new workstreams. Test suite + gates carried
+> forward unchanged (they're good). Do not delete this file.
+
+## Session decisions that shape this plan (S-cards)
+
+- **S1** Product = plain "brick self" $9.99 + couple premium; mounts = listing
+  contexts; **handhelds = the wedge** (library props, checkout picker).
+- **S2** Pets V2 (experiment allowed, no pet SKUs yet); familiar = prop.
+- **S3** Photo backing out · photo print digital-only · AR parked ·
+  cake topper = spike mount · family cut (≤3 identity meshes).
+- **S4** Packaging = plain box S/M + logo sticker + thank-you/QR card; name
+  prints on plinth via variant data; both providers need one sample order each
+  before any listing.
+- **S5** Theme packs: Xmas first (list mid-Oct), then Wizard + Witch/Gothic
+  evergreen, Anime-Style Originals (IP-safe), Life-Events occasion layer;
+  custom requests pass `ip_check` only.
+- **S6** Words we never print: LEGO, minifigure, any franchise/fandom term,
+  "inspired by X".
 
 ## Phases & dependencies
 
 ```
-P0 foundations ──► P1 mesh production ──► P2 surround (video/AR) ──► P3 physical
-      │                    │                       │                      │
-   normalise.py         Meshy key             USDZ/turntable         mounts/CAD
-   compose()            post-mesh gates       AR page + QR           Makr3D sample
-   catalog assets       pets/{id}/ store      impact math             print photos
-                                                                       │
-                              P4 commercial ◄──────────────────────────┘
-                              Prodigi SKUs · Etsy listings · traffic engine
+P0 foundations ──► P0.5 brand & creative ──► P1 mesh ──► P2 surround ──► P3 physical ──► P4 commercial
+ no key needed      docs, templates,          Meshy key    turntable +      samples +       listings +
+                    shot lists                 (or Kaggle)  listing video    packaging       traffic
 ```
 
-Nothing in P2–P4 is real without a P1 mesh. P0 items are buildable **today with
-no key** — that's where the next agent starts.
-
-### P0 — foundations (no key required)
+### P0 — foundations (no key required) ← START HERE
 | Task | Done when |
 |---|---|
-| `engine/normalise.py` | order dir → `image_urls[]`; rejects with reason |
-| `boards/` + `tiles/` + `catalog.json` from `concepts.md` (36 IDs) | `json.load` succeeds, all 36 present, every `PRP-*` resolvable |
-| `compose()` | emits prompt + shot list; refuses >3 identities, mutable identity, `ip_check != pass` |
-| Unit tests green (below) | `pytest` passes on a machine with no API keys |
+| ✅ `engine/normalise.py` (EXIF, role-sort front-first, size guard, `image_urls[]`) — **DONE this session**,9 tests green (`engine/tests/test_normalise.py`) | order dir → payload; rejects with reason |
+| `boards/` + `tiles/` + `catalog.json` from `concepts.md` (36 IDs) | `json.load` OK, all36 present, `PRP-*` resolvable (incl. **new handheld PRP ids**) |
+| `compose()` | prompt + shot list; refuses >3 identities, mutable identity, `ip_check != pass` |
+| Unit tests green offline | `pytest engine/tests -q` passes with no keys |
+
+### P0.5 — brand & creative (docs, no key) — mostly DONE this session
+| Task | Status |
+|---|---|
+| canonical §4/§5/glossary/§6 amendments | ✅ done |
+| handheld library (`PROPS.md`) | ✅ done |
+| positioning + competitive scan (`targeting.md`) | ✅ done |
+| theme packs + IP playbook (`theme-packs.md`) | ✅ done |
+| fulfilment + packaging (`fulfilment.md`) | ✅ done |
+| shot list + listing video + Xmas poster spec (`creative-system.md`) | ✅ done (assets not) |
+| **brick grammar bible** (studs, minifig scale, ABS gloss, palette) | ⬜ todo |
+| Xmas launch one-pager (dates, SKUs, cut-offs) | ⬜ todo |
+| poster/shot **assets** (renders once mesh exists) | ⬜ blocked on P1 |
 
 ### P1 — mesh production
 | Task | Done when |
 |---|---|
-| Meshy key + confirm two **Q** marks (free terms, image limits) | notes recorded in `MESH_PIPELINE.md` |
-| Live multi-image call on a real pet | task `SUCCEEDED`, glb downloaded |
-| Immediate store + checksum in `engine/pets/{id}/` | re-download test proves URLs expired but file intact |
-| Post-mesh gates: GLB parses · 2mm walls · face count | `print-ready: true` only if all pass |
-| USDZ conversion (headless Blender) | `ios-src` resolves on a phone |
+| Meshy key + confirm two **Q** marks (free terms, image limits) | notes in MESH_PIPELINE |
+| Live multi-image call on a real photo (or Kaggle-local fallback) | task SUCCEEDED, glb stored immediately |
+| Post-mesh gates + store (`pets/` → rename `figures/`) | checksums, `print-ready` only after gates |
+| **Standard brick pet iteration** (V2 track, preview-gate, free tier) | brick dog+cat base meshes OR BrickLink fallback chosen |
 
-### P2 — surround (video / AR / promo)
+### P2 — surround (video, no AR)
 | Task | Done when |
 |---|---|
-| Turntable renderer (mesh → MP4) | 10s loop, no rig needed |
-| `video.py` = teaser (15s muted, captions ≥96px) + full cut | both export from one render |
-| AR page real URLs (`brick.py` `MESH-PENDING` gone) | grep returns 0 |
-| UUID binding `/a/{uuid}` → pet → mesh → action | log shows resolution |
-| QR emboss in base + **scan test at 30cm** | screenshot + log entry per design |
-| Impact math: time-to-first-mesh, credits/pet, conversion notes | table in this file updated |
+| Turntable renderer (mesh → MP4, headless) |10s loop |
+| Listing video slot A shipped on first listing | muted, no audio dependency |
+| `video.py` teaser + talk.mp4 wiring (spells as video) |6s spell teasers export |
+| Before/after composite (photo → brick) template | one image, reused |
+| ~~AR page / UUID / USDZ~~ | **PARKED (S3)** — spec remains in old DEVPLAN history |
 
 ### P3 — physical
-Mount CAD → prop geometry → Makr3D live quote on real STL → sample order →
-hold + photograph (hero, before/after, lifestyle, scale, box) → print profile approved.
+Mount parts (spike/loop/magnet/ring/plinth) → handheld prop geometry →
+**Makr3D sample + 3D Vikings sample** (both, before listing) → plain-box
+pack-in artwork (sticker + QR card) mailed to providers → order a customer-
+ready S box → photograph the unboxing (creative-system slots1,4,5).
 
 ### P4 — commercial
-Prodigi SKUs → live prices → listings per `listing-playbook.md` → traffic engine
-(daily posting; reviews flywheel).
+Prodigi photo-print SKU only if demand → Etsy listings per
+`listing-playbook` + **creative-system image5 + video** → Xmas: poster +
+Snowfall teaser live **mid-Oct**, cut-offs published → traffic engine →
+first-10 review flywheel (G6).
 
----
+## Test suite (carried forward — run: `python3 -m pytest engine/tests -q`)
 
-## Test suite (`engine/tests/` — run offline, no keys)
+`test_normalise` (EXIF/role-sort/base64/rejects) · `test_intake` ·
+`test_avatar` · `test_render` (card PNG5:7 non-blank) · `test_compose`
+(>3 identities, identity immutability, ip_check refusal) · `test_meshy_stub`
+(payload shape, front-first, expired-URL clear error) · `test_postmesh`
+(magic bytes, checksum, print-ready gating) · `test_video` (h264+aac,
+duration match, teaser ≤15s) · `test_ar` *(kept, dormant while AR parked)* ·
+`test_pricing` (evidence marks,30% floor). **No test may need network or a key.**
 
-| File | Asserts |
-|---|---|
-| `test_normalise.py` | EXIF rotated correctly (fixture with rotation tag); <200px rejected; non-image rejected; role-sort puts front first; base64 round-trips; `favourite` excluded when QC fails |
-| `test_intake.py` | fake clean order passes; messy order (missing pet name/facts) defaults and continues; zero-usable-photos rejected with reason |
-| `test_avatar.py` | avatar created, persisted, listed, photo path resolves; re-upload idempotent |
-| `test_render.py` | card PNG exists, 5:7, non-blank (stdev > threshold); template chosen by occasion |
-| `test_compose.py` | **guards**: >3 identities → error; identity field cannot be rewritten by scene/props; `ip_check: pending|fail` → refuses listing pack |
-| `test_meshy_stub.py` | with stubbed HTTP: multi-image payload shape correct (front first, `target_formats:["glb"]`); `SUCCEEDED` triggers immediate download; **expired-URL retry gives a clear error, not a silent empty file** |
-| `test_postmesh.py` | GLB magic bytes; file present + checksum matches; `print-ready` false until all gates pass |
-| `test_video.py` | MP4 has h264 + aac streams; duration ≈ audio duration; teaser ≤15s; captions burned (frame has non-uniform text region) |
-| `test_ar.py` | page has no `MESH-PENDING`; `ios-src` present; binding UUID resolves to right pet; QR decodes back to the UUID |
-| `test_pricing.py` | every price in `products`/`stack` is evidence-marked (✓/Q/EST); 30% net ≥ floor |
+## Validation gates (manual, sequential — each blocks the next)
 
-Run: `python3 -m pytest engine/tests -q`. **No test may require network or a key**
-— mock everything external; the whole point is CI-green before Meshy exists.
+1. **G1 Photo gate**:5 real photo sets pass `photo_role_policy`.
+2. **G2 Mesh gate**: real subject through P1 → blind recognisability.
+3. **G3 Print gate**: Makr3D sample approved. **Never list before this.**
+4. **G4 Scan gate**: QR at30cm,3 phones → screenshots become assets.
+5. **G5 Order gate**: sandbox order → preview → fulfil → delivered photo.
+6. **G6 Review gate**: first10 orders, review rate ≥10% or fix the QR moment.
 
-## Validation gates (manual, in order — each blocks the next)
+## Promo assets (from `docs/creative-system.md`, AR entries dropped)
 
-1. **G1 Photo gate**: 5 real buyers' photo sets pass `photo_role_policy`
-   (front+body+side). If <4/5 pass, fix intake copy, not the pipeline.
-2. **G2 Mesh gate**: one real pet through P1 → recognizability judged blind
-   against the source photo ("is this your dog?"). Fail → adjust prompts
-   (`texture-prompts.md`), not code.
-3. **G3 Print gate**: Makr3D sample of one approved mesh. Fail → wall-thickness
-   or orientation changes. **Never list before this.**
-4. **G4 Scan gate**: 3 phones (iOS/Android), QR at 30cm, page loads, action plays.
-   Screenshot each — these become listing assets.
-5. **G5 Order gate**: one end-to-end fake order on Etsy sandbox → preview approve
-   → real fulfil → delivered photo. First real money before any ad spend.
-6. **G6 Review gate**: first 10 orders → review rate measured; below 10% →
-   fix QR moment + follow-up messaging (the flywheel, per `xmas-stockfillers.md`).
-
----
-
-## Promo video assets (what we produce)
-
-All from the same renders; one shoot, several exports (see `listing-playbook.md` shot list).
-
-| # | Asset | Where it goes | Spec |
-|---|---|---|---|
-| 1 | **15s listing teaser** | Etsy listing slot 1 | muted autoplay, captions ≥96px: photo(0-2) → mesh rotate(2-6) → print in hand(6-10) → AR scan(10-13) → price card(13-15) |
-| 2 | **Vertical social cut** (9:16) | TikTok/Reels/Shorts | same content + TTS voice + music; burned captions |
-| 3 | **Before/after reveal** | Etsy photo slot 2 + social | customer photo → 3D preview morph (the single highest-converting format per competitor audit) |
-| 4 | **AR screen recording** | Etsy photo slot 10 + social | real phone, tap → spell/action plays; authentic OS chrome |
-| 5 | **Process triptych** | photo slot 5 | upload → preview → printed in hand |
-| 6 | **Seasonal promo cut** | paid/organic push, Q4 | same pet, Christmas scene + spell (snowfall) — one per collection per season |
-
-Production: `video.py` (turntable + talk.mp4 path) → ffmpeg concat + caption burn →
-two masters (muted-Etsy / sound-social). Frame assets come from mesh renders and
-`engine/cards/*.png`.
-
-## AR — what to show, and the Etsy constraint
-
-**Etsy allows no embeds, no interactive, no AR on listings.** So AR is shown by
-*recording it* and sold by *delivering it*:
-
-- **On Etsy**: AR screen-recording in the photo/video slots (asset #4), copy
-  line *"Scan the code on your figure — it comes alive"*. The promise is
-  demonstrable without the feature being interactive on-platform.
-- **After purchase**: QR/NFC embossed in the figure base (default carrier) →
-  `/a/{uuid}` → `model-viewer` (GLB + USDZ + MP4 fallback). Pre-ship scan gate.
-- **Demo pack (4 clips, each ≤10s)**: `lumos burst` (default, every SKU),
-  `snowfall` (Christmas), `kiss` (couples), `levitation` (kids' gasp moment).
-  Each is one screen-record on one phone — reuse across every listing in that
-  collection.
-
-## Etsy showcase — the 10 slots, filled
-
-| Slot | Content | Source |
-|---|---|---|
-| 1 | Hero: finished figure, dark bg, gold accent | print photo (G3) |
-| 2 | Before/after: customer photo → mesh | asset #3 |
-| 3 | Lifestyle: real shelf, human hand for scale | print photo |
-| 4 | Variant upsell (couple or +pet) | second mesh render |
-| 5 | Process triptych | asset #5 |
-| 6 | Base close-up + engraved name + QR | print photo (G3) |
-| 7 | Gift box / packaging | print photo |
-| 8 | Scale reference (coin/ruler) | print photo |
-| 9 | Review screenshots | from G6 onward |
-| 10 | AR moment | asset #4 |
-| **video (slot 1 video)** | 15s muted teaser | asset #1 |
-
-Title: keyword-first, 140 chars. Tags: 13. Personalization: 5 text boxes
-(recipient, pet/breed, occasion/scene, style, message). Never say franchise
-names. Publish lead-time SLA from `lead_time_sla` in config, three times.
-
-## Definition of done (release)
-
-P0–P4 tasks done · G1–G6 gates passed · tests green offline ·
-`ip_check: pass` on every shipped template · first print sample held by a human ·
-airtimer live on `engine/.env` secrets · `MESH_PIPELINE.md` Q-marks resolved.
+15s listing teaser · vertical social cut · before/after reveal · process
+triptych · **Xmas poster + Snowfall teaser** · seasonal re-skins per pack.
+Production: turntable renderer + talk.mp4 → ffmpeg concat + captions → two
+masters (muted-Etsy / sound-social).
