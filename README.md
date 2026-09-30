@@ -4,13 +4,31 @@
 >
 > Do not delete this file.
 
-# Figg (repo codename: bwick)
+# Figg Studio
 
-Personalized pet universe: upload once, own the character, monetize across
-cards, figures, video, AR. One pet mesh feeds every SKU. Zero inventory.
-Brand **Figg** · lines **Roast / Mystic / Holiday** · four products
-(pet, couple, solo+pet, solo — max three identity meshes; couple+pet variant
-allowed, family cut. See `PROPS.md`).
+**Figg turns people into products.**
+
+Upload a photo → get a custom pet figure, couple avatar, personalized ornament, greeting card, video. The buyer does not need to belong to a deep enthusiast subculture. It is commercial, emotional, occasion-led.
+
+Brand **Figg Studio** · domain **pog.pet** · Etsy shop **PogPet**
+
+## Positioning
+
+| | Figg Studio | OddHobbies |
+|---|---|---|
+| Core promise | **Make it yours** | **Made for people who are really into things** |
+| Starting input | Photo / person / pet / name | Hobby / collection / workflow |
+| Purchase trigger | Birthday, Christmas, anniversary, pet gift | Hobby obsession, collection pride, upgrading setup |
+| Typical product | Custom pet figure, couple avatar, personalised ornament | Bonsai wire dock, miniature plinth, card shrine |
+| Personalization | Identity-heavy | Hobby-heavy, identity optional |
+| Aesthetic | Broad, polished, accessible | Curious, premium, specialist |
+| Catalog logic | Occasion × recipient × format | Hobby × ritual/problem × product |
+
+## What We Sell
+
+**PogPet** (Etsy shop) — custom brick-style figures, cards, ornaments, wrapping paper, stickers, postcards. Upload photo → we create → Prodigi/Makr3D fulfills.
+
+One pet mesh feeds every SKU. Zero inventory. Upload once, own the character.
 
 ONE canonical repo: `engine/` (runnable pipeline) + `docs/` (specs) + root
 strategy files. Former `funnylabs` repo is superseded.
